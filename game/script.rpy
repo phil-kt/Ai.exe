@@ -35,9 +35,14 @@ image mozilla crying = "images/mozilla/mozilla_crying_small.png"
 image mozilla surprised = "images/mozilla/mozilla_surprised_small.png"
 
 image bg desk = "images/bg/desk.jpg"
+image bg desk_broken = "images/bg/desk_broken.jpg"
 image bg classroom = "images/bg/class.jpg"
 image bg black = "images/bg/black.jpg"
 image bg hallway = "images/bg/hallway.jpg"
+image bg student council = "images/bg/student_council.jpg"
+image bg lab = "images/bg/lab.jpg"
+image bg art_wall = "images/bg/art_wall.jpg"
+image bg library = "images/bg/library.jpg"
 
 # The game starts here.
 label start:
@@ -374,13 +379,13 @@ label start:
 
     "The last thoughts of the day drifted through my mind as my head hit the pillow."
 
-    $ renpy.pause()
+    scene bg black
 
-    scene bg desk
+    $ renpy.pause()
 
     "*BEEP BEEP BEEP*"
 
-    "Ugh"
+    "Ugh."
 
     "My alarm."
 
@@ -390,9 +395,11 @@ label start:
 
     $ renpy.pause();
 
+    scene bg desk
+
     "*BEEP* *BEEP* *BEEP*"
 
-    "Ugh"
+    "Ugh."
 
     "My alarm."
 
@@ -406,7 +413,7 @@ label start:
 
     "......11!?"
 
-    "Crap, I'm late!"
+    protag "\"Crap, I'm late!\""
 
     "I take a shower and rush out the door, running full sprint to school."
 
@@ -835,7 +842,281 @@ label start:
 
             hide ie
             with dissolve
+            jump bedtime
 
     label bedtime:
+
+        "Oh man, what a tiring day."
+
+        "Ever since I've started going to class it seems like I get one job after the other."
+
+        "It is keeping my busy though."
+
+        "Much better than sitting around wasting my energy on the Internet all day."
+
+        "Although I do kind of miss playing my visual novels."
+
+        "I was about to reach the true route!"
+
+        "*sigh* I guess I'll have to wait 'til Christmas to see the ending."
+
+        scene bg black
+
+
+    "*BEEP* *BEEP* BEEP*"
+
+    "My alarm again."
+
+    "Time to actually get up."
+
+    "...But bed is so warm."
+
+    "I really can't be late though, or otherwise this might be my last winter in this bed."
+
+    "Struggling, I get up and walk to class."
+
+    scene bg classroom
+
+    "I get to class before the teacher starts homeroom."
+
+    "I'm surprised how early I made it in."
+
+    if $ ie_flag == 1:
+        show ie happy
+        with dissolve
+
+        ie "I'm glad you made it today!"
+        
+        protag "\"Yeah, the dinner last night really helped me sleep well.\""
+
+        ie "\"Great, I have to go back to class now but I'll see you at lunch!\""
+
+        hide ie
+        with dissolve
+
+    elif $ chrome_flag == 1 :
+        show chrome happy
+        with dissolve
+
+        chrome "\"Naoto-kun, happy to see you came to class on time today.\""
+
+        protag "\"Yeah, It was a real struggle, but I realize I had to in order to keep my seat.\""
+
+        chrome "\"That's a good attitude to have. I'll see you after school at student council!\""
+
+        hide chrome
+        with dissolve
+
+    else:
+        "I put my head down and fall asleep until the teacher comes in."
+
+    teacher "All right everyone to your seats!"
+
+    "I promptly lie my head back down to my desk."
+
+    scene bg black
+
+    "I feel something hit my back."
+
+    "Oh crap, did I fall asleep?"
+
+    scene bg classroom
+    with fade
+
+    "I look around my desk and see a crumpled up note next to me."
+
+    "Puzzled, I look around, but no one looks back."
+
+    "I open the note."
+
+    mozilla "Hi Naoto-kun, I've only been here two days but I already see why you sleep."
+
+    "A note from Mosaic? I scribble back."
+
+    protag "Haha, you too huh? This teacher knows just the right tone to use to put me to sleep."
+
+    "I sneakily toss is back towards her."
+
+    "She picks up the note and giggles at what I wrote."
+
+    "She writes a response, and tosses it back."
+
+    mozilla "You even slept through lunch! Yeah, I'm always feeling sleepy too! This is helping keep me awake."
+
+    "Crap. I slept through lunch? I can't believe Elsie didn't wake me up."
+
+    mozilla "By the way, would you mind showing me around the school again today?" 
+
+    "After class...I have the student council."
+
+    teacher "Tamura-kun, are you exchanging notes in my class?"
+
+    "Caught red-handed."
+
+    protag "No sir, I was merely taking notes on a small piece of paper."
+
+    protag "It makes carrying around the subject material much easier so I can study wherever I am."
+
+    teacher "Uh huh. Well I'll have my eye on you for the rest of the class."
+
+    "Well I guess that ends note swapping time."
+
+    "I look back at Mosaic and give a little shrug."
+
+    "She shrugs back."
+
+    play sound "sounds/effects/bell.mp3"
+
+    "Hey, class is over!"
+
+    "I get up and walk across to Mozilla."
+
+    show mozilla neutral
+
+    mozilla "Sorry I almost got you in trouble."
+
+    protag "It's no big deal."
+
+    mozilla happy "Yeah, you managed to give a pretty smooth response. It was funny."
+
+    protag "Haha, thanks. In response to the question in your note by the way."
+
+    menu:
+        "I have student council today, so sadly I can't":
+            $ chrome_flag += 1
+            mozilla sad "\"Oh really? You're on the student council?\""
+            protag "\"Yeah, as of yesterday. It's so I can pass this class.\""
+            mozilla neutral "\"That's so sudden! Well I understand, it's for school. Maybe next time.\""
+            protag "\"Sorry about that.\""
+            mozilla "\"It's okay! I have to get going now, so bye!\""
+            protag "\"Bye Mosaic.\""
+            hide mozilla
+            with dissolve
+            jump student_council
+
+        "I'd love to show you around the school":
+            $ mozilla_flag += 1
+            "I'm sure Kuromi can handle herself one day."
+            mozilla happy "\"Yay! Thank you. Sorry for taking time out of your schedule.\""
+            protag "\"It's no big deal. I didn't really have any other plans.\""
+            mozilla "\"Okay, let's go!\""
+
+    label student_council:
+        scene bg hallway
+
+        "I walk out of the classroom down to the student council room."
+
+        "This time I knock on the door with no fear."
+
+        protag "\"Tamura Naoto, reporting for duty.\""
+
+        show chrome happy
+        with dissolve
+
+        chrome "\"Oh good you're here, I've been waiting!\""
+
+        chrome neutral "\"Today we're gonna be working on flyers for the class's Christmas party.\""
+
+        chrome happy "\"So I hope you'll show me your artistic side today.\""
+
+        protag "\"Oh man, I really can't draw.\""
+
+        chrome neutral "\"Don't say that without even trying!\""
+
+        protag "\"No trust me, I haven't touched a marker in years.\""
+
+        chrome "\"Well you never know. Here! Draw something.\""
+
+        "I take paper from Kuromi's hand a attempt to a Christmas tree."
+
+        chrome "\"Um, Naoto-kun, why does that saw have presents underneath it?\""
+
+        protag "\"It's not a saw it's a Christmas tree!\""
+
+        chrome happy "\"Oh I see. You were right, you really can't draw haha.\""
+
+        "I told you..."
+
+        chrome neutral "\"Well okay. Don't worry about the drawing part then.\""
+
+        chrome "\"I'm pretty good at doodling so I'll handle it, you just try to come up with a good slogan.\""
+
+        protag "\"A...slogan? For a class Christmas party?\""
+
+        chrome happy "\"Yeah! Something that will want to make people come and celebrate the holidays with their classmates!\""
+
+        protag "\"Huh, I guess I can try.\""
+
+
+    label school_tour:
+
+        scene bg hallway
+
+        "We walked out into the hallway of our class."
+
+        protag "\"So, what exactly would you like to see?\""
+
+        mozilla "\"Everything!\""
+
+        protag "\"Everything huh. Well our school isn't that big so it might not take long.\""
+
+        mozilla "\"That's okay, as long as I get a feel for the place.\""
+
+        mozilla happy "\"I can't keep getting lost in my own school now, can I?\""
+
+        show bg lab
+        with pixellate
+
+        protag "\"This is the lab. It's where we work on most of our coding assignments.\""
+
+        mozilla surprised"\"Ooo coding? I wonder when I'll start to do that.\""
+
+        protag "\"Well I'm pretty sure we have a homework due at the end of the semester dedicated to the code we learned.\""
+
+        protag "\"So I'm guessing pretty soon.\""
+
+        protag "\"Other than that a lot of people use the lab to play flash games and generally goof off.\""
+
+        mozilla happy "\"Like that guy playing Pacman over there?\""
+
+        "There was a person playing Pacman."
+
+        "Pacman Player" "Goddamn you Blinky! I was on the last pellet!"
+
+        "They didn't seem to be all that great at it though."
+
+        protag "\"Haha, yeah, like that guy playing Pacman.\""
+
+        show mozilla neutral
+
+        show bg library
+        with pixellate
+
+        protag "\"This is the library.\""
+
+        protag "\"It's your standard fare, with a lot of books about technology.\""
+
+        "Mosaic picked a random book off the shelf."
+
+        mozilla neutral "\"\'The Algorithm Design Manual\', sounds boring.\""
+
+        protag "\"Yeah, mostly only the upperclassmen hang around here.\""
+
+        protag "\"For beginners like us we're better off just reading notes.\""
+
+        mozilla "\"You have to teach me sometime so I can catch up!\""
+
+        protag "\"Sure, that sounds like a good way to brush up on my skills too.\""
+
+        scene bg art_wall
+        with pixellate
+
+        mozilla surprised "\"Woooww, I didn't know this school had arts stuff too!\""
+
+        "Mosaic stared intently at the wall of art."
+
+        protag "\"Yeah, we have some students who are interested in graphic design so they like to sprinkle the campus with their art.\""
+
+        protag "\"I don't really get it, but it makes this campus look cheerier so I don't mind.\""
 
     return
