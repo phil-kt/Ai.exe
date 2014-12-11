@@ -2,16 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 35: expected statement.
-    [pname] = "Naoto"
-            ^
-
-File "game/script.rpy", line 350: expected statement.
-    renpy.pause()
-                 ^
-
-File "game/script.rpy", line 362: expected statement.
-    renpy.pause();
-                 ^
+File "game/script.rpy", line 782: expected statement.
+    home_dinner:
+               ^
 
 Ren'Py Version: Ren'Py 6.18.3.761

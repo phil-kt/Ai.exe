@@ -6,44 +6,52 @@
 # Declare characters used by this game.
 define protag = Character("Naoto", color = "#AAFF8D", show_two_window = True)
 define teacher = Character("Teacher", color = "FFFFFF", show_two_window = True)
-define ie = DynamicCharacter('ie_tan', color="#2672EC", show_two_window = True, image = "elsie")
-define chrome = DynamicCharacter('kuromi', color = "666666", show_two_window = True, image = "kuromi")
-define mozilla = DynamicCharacter("mojira", color = "#FF9500", show_two_window = True, image = "mosaic")
+define ie = DynamicCharacter('ie_tan', color="#2672EC", show_two_window = True, image = "ie")
+define chrome = DynamicCharacter('kuromi', color = "666666", show_two_window = True, image = "chrome")
+define mozilla = DynamicCharacter("mojira", color = "#FF9500", show_two_window = True, image = "mozilla")
 
-image kuromi neutral = "images/chrome/chrome_neutral_small.png"
-image kuromi happy = "images/chrome/chrome_happy_small.png"
-image kuromi angry = "images/chrome/chrome_angry_small.png"
-image kuromi embarrassed = "images/chrome/chrome_embarrassed_small.png"
-image kuromi sad = "images/chrome/chrome_sad_small.png"
-image kuromi crying = "images/chrome/chrome_crying_small.png"
-image kuromi surprised = "images/chrome/chrome_surprised_small.png"
+image chrome neutral = "images/chrome/chrome_neutral_small.png"
+image chrome happy = "images/chrome/chrome_happy_small.png"
+image chrome angry = "images/chrome/chrome_angry_small.png"
+image chrome embarrassed = "images/chrome/chrome_embarrassed_small.png"
+image chrome sad = "images/chrome/chrome_sad_small.png"
+image chrome crying = "images/chrome/chrome_crying_small.png"
+image chrome surprised = "images/chrome/chrome_surprised_small.png"
 
-image elsie neutral = "images/ie/ie_neutral_small.png"
-image elsie happy = "images/ie/ie_happy_small.png"
-image elsie angry = "images/ie/ie_angry_small.png"
-image elsie embarrassed = "images/ie/ie_embarrassed_small.png"
-image elsie sad = "images/ie/ie_sad_small.png"
-image elsie crying = "images/ie/ie_crying_crying.png"
-image elsie surprised = "images/ie/ie_surprised_small.png"
+image ie neutral = "images/ie/ie_neutral_small.png"
+image ie happy = "images/ie/ie_happy_small.png"
+image ie angry = "images/ie/ie_angry_small.png"
+image ie embarrassed = "images/ie/ie_embarrassed_small.png"
+image ie sad = "images/ie/ie_sad_small.png"
+image ie crying = "images/ie/ie_crying_crying.png"
+image ie surprised = "images/ie/ie_surprised_small.png"
 
-image mosaic neutral = "images/mozilla/mozilla_neutral_small.png"
-image mosaic happy = "images/mozilla/mozilla_happy_small.png"
-image mosaic angry = "images/mozilla/mozilla_angry_small.png"
-image mosaic embarrassed = "images/mozilla/mozilla_embarrassed_small.png"
-image mosaic sad = "images/mozilla/mozilla_sad_small.png"
-image mosaic crying = "images/mozilla/mozilla_crying_small.png"
-image mosaic surprised = "images/mozilla/mozilla_surprised_small.png"
+image mozilla neutral = "images/mozilla/mozilla_neutral_small.png"
+image mozilla happy = "images/mozilla/mozilla_happy_small.png"
+image mozilla angry = "images/mozilla/mozilla_angry_small.png"
+image mozilla embarrassed = "images/mozilla/mozilla_embarrassed_small.png"
+image mozilla sad = "images/mozilla/mozilla_sad_small.png"
+image mozilla crying = "images/mozilla/mozilla_crying_small.png"
+image mozilla surprised = "images/mozilla/mozilla_surprised_small.png"
 
-
+image bg desk = "images/bg/desk.jpg"
 image bg classroom = "images/bg/class.jpg"
-
+image bg black = "images/bg/black.jpg"
+image bg hallway = "images/bg/hallway.jpg"
 
 # The game starts here.
 label start:
     
+
+    $ ie_flag = 0
+    $ chrome_flag = 0
+    $ mozilla_flag = 0
+
     $ ie_tan = "???"
     $ kuromi = "???"
     $ mojira = "???"
+
+    scene bg desk
 
     protag "\"Troll.\""
 
@@ -93,8 +101,10 @@ label start:
 
     $renpy.pause()
 
-    "----7 days later----"
+    scene bg classroom
+    with wipeleft
 
+    "----7 days later----"
 
     "You'd think an IT school would have competent repair services for computers"
 
@@ -106,13 +116,13 @@ label start:
 
     "So I sit here listening to the student council president go on about student council matters."
 
-    show kuromi neutral
+    show chrome neutral
     
     chrome "...Christmas party at the end of the month. Right now we're looking for organizers, so please stop by the student council room after school if you're interested!"
 
     "That's Kuromi, our student council president."
 
-    $ kuromu = "Kuromi"
+    $ kuromi = "Kuromi"
 
     "She's pretty strict and serious. However, as you can see she's pretty so she also has a fair amount of popularity, at least among the guys."
 
@@ -126,7 +136,7 @@ label start:
 
     chrome "Thank you for listening. Hope to see you all after class!"
 
-    hide kuromi
+    hide chrome
     with dissolve
 
     teacher "Okay, thank you Kuromi. Now moving onto class. Today we are covering..."
@@ -141,7 +151,7 @@ label start:
 
     ie "\"Naoto-kun, you came to school today!\""
 
-    show elsie happy
+    show ie happy
     with dissolve
 
     ie "\"I've been so worried! Where have you been lately? How come you haven't come to class?\""
@@ -177,10 +187,10 @@ label start:
             ie "Yay! Let's eat. It's been a while since we've talked."
         "\"No thanks Elsie, I'm good.\"":
 
-            ie "I won't take no for an answer!"
+            ie haopy "I won't take no for an answer!"
             "Of course she wouldn't."
 
-    ie "\"Here, I made your favorite, steamed beef over rice with broccoli.\""
+    ie neutral "\"Here, I made your favorite, steamed beef over rice with broccoli.\""
 
     protag "\"You know I hate broccoli.\""
 
@@ -192,7 +202,7 @@ label start:
 
     "It's surprisingly good. Elsie was never the best at cooking, but it looks likes dorm life has brought out a bit of the chef in her."
 
-    ie "\"Don't think I don't see you!\""
+    ie angry "\"Don't think I don't see you!\""
 
     ie "\"You're only going to get paler if you don't eat it!\""
 
@@ -202,9 +212,9 @@ label start:
 
     "Thank god."
 
-    ie "\"Oh, lunch is over. If you wanna walk home together I'll be by the front gates for a bit after class!\""
+    ie surprised"\"Oh, lunch is over. If you wanna walk home together I'll be by the front gates for a bit after class!\""
 
-    hide elsie
+    hide ie
     with dissolve
 
     "And with that she returned to her class."
@@ -225,7 +235,7 @@ label start:
 
     menu:
         "\"CSS\"":
-            teacher "\"Sorry, that's not right. Maybe you should pay better attention in class, [pname].\""
+            teacher "\"Sorry, that's not right. Maybe you should pay better attention in class, Tamura-kun.\""
             "I hear snickers around me."
             "What did I expect. I should've just admitted I wasn't looking."
         "\"HTML\"":
@@ -256,7 +266,7 @@ label start:
 
     "I offer my hand to help her up."
 
-    show mosaic neutral
+    show mozilla neutral
     with easeinbottom
 
     mozilla "\"Ow. No no, it's my fault.\""
@@ -275,9 +285,7 @@ label start:
 
     protag "\"Just follow me, the faculty office isn't far.\""
 
-    show mozilla happy
-
-    mozilla "\"Thanks, you're a lifesaver!\""
+    mozilla happy "\"Thanks, you're a lifesaver!\""
 
     protag "\"No problem. So, a transfer student huh?\""
 
@@ -321,11 +329,17 @@ label start:
 
     mozilla "\"Bye!\""
 
+    hide mozilla
+    with dissolve
+
     "I slowly meandered out the front gates of the school."
 
     "What a cute girl, I wonder where she's originally from."
 
     "Certainly not Japanese with that hair color."
+
+    show ie angry
+    with dissolve
 
     ie "\"Hey! You're late!\""
 
@@ -339,7 +353,7 @@ label start:
 
     "...But I guess in a literal sense I did just \"hit\" on a girl."
 
-    ie "\"Hmmm, a transfer student at this time of year? How rare!\""
+    ie surprised "\"A transfer student at this time of year? How rare!\""
 
     protag "\"Yeah, it seems like she's a foreigner as well.\""
 
@@ -348,6 +362,9 @@ label start:
     protag "\"Yeah, yeah, I'll get right on it.\""
 
     "Elsie and I walked home as she raved on and on about the new student she hadn't even met."
+
+    hide ie
+    with dissolve
 
     "Finally I crashed through my door into my room."
 
@@ -358,6 +375,8 @@ label start:
     "The last thoughts of the day drifted through my mind as my head hit the pillow."
 
     $ renpy.pause()
+
+    scene bg desk
 
     "*BEEP BEEP BEEP*"
 
@@ -415,11 +434,14 @@ label start:
 
     "The lunch bell chimes as I feel a prodding in my side."
 
+    show ie happy
+    with dissolve
+
     ie "\"Hey, hey. Wake up Naoto-kun!\""
 
     "Elsie, huh. Well maybe I can just nap for a bit before she wakes me up completely."
 
-    ie "\"Are you ignoring me? Well then, I didn't want to do this but...\""
+    ie angry"\"Are you ignoring me? Well then, I didn't want to do this but...\""
 
     "I feel her slowly wriggling her fingers near my gut as-"
 
@@ -437,7 +459,7 @@ label start:
 
     protag "\"What do you want?\""
 
-    ie "\"Well, I was going to offer you lunch, but you seem to be in a bad move."
+    ie neutral "\"Well, I was going to offer you lunch, but you seem to be in a bad move."
 
     ie "Besides that, it seems that the student council president wants to see you in the hallway."
 
@@ -457,9 +479,14 @@ label start:
 
     ie "*whisper* Don't get in trouble! *whisper*"
 
+    hide ie
+
     "I walk out into the hallway to meet Kuromi."
 
     "What in God's name could she want from me?"
+
+    show chrome neutral
+    with dissolve
 
     chrome "Tamura-kun, I'm sorry to call you out."
 
@@ -499,23 +526,31 @@ label start:
 
     protag "\"I understand. I guess I see where you and the teacher are coming from.\""
 
-    chrome "\"Great. Come down to the student council room after class today then and we'll get you started.\""
+    chrome happy "\"Great! Come down to the student council room after class today then and we'll get you started.\""
 
     protag "\"Okay, I will see you then.\""
+
+    hide chrome
+    with dissolve
 
     "The bell chimes signifying the end of lunch."
 
     "I walk back into class just as Elsie is leaving."
 
+    show ie neutral
+
     ie "\"You were out there for a while, what were you talking about?\""
 
     protag "\"Apparently I've been drafted to become a part of the student council.\""
 
-    ie "\"You? In the student council? That's too funny haha.\""
+    ie happy "\"You? In the student council? That's too funny haha!\""
 
     protag "\"Yeah, yeah. Head back to your class.\""
 
     ie "\"Okay, have fun in the student council after class Mr. Executive.\""
+
+    hide ie
+    with dissolve
 
     "And with that clever comment she leaves the room."
 
@@ -532,6 +567,8 @@ label start:
     "Guess I better follow her lead."
 
     mozilla "\"Ah Naoto-kun!\""
+
+    scene bg hallway
 
     "I hear someone call my name as I walk down the hall."
 
@@ -551,7 +588,7 @@ label start:
 
     "All of a sudden the door opens in front of me."
 
-    show kuromi neutral
+    show chrome neutral
 
     chrome "\"What are you doing out here? I've been waiting. Come in!\""
 
@@ -573,7 +610,7 @@ label start:
 
     chrome "\"If you have any questions feel free to ask.\""
 
-    hide kuromi
+    hide chrome
     with dissolve
 
     "Maybe the other members will come later."
@@ -600,7 +637,7 @@ label start:
 
     protag "\"Huh, why not?\""
 
-    show kuromi embarrassed
+    show chrome embarrassed
 
     chrome "\"Well...the truth is.\""
 
@@ -622,7 +659,7 @@ label start:
 
     chrome "\"Whatever, just file those papers.\""
 
-    hide kuromi
+    hide chrome
 
     "With a heavy atmosphere, I went back to filing the class's receipts for the council's expenditures."
 
@@ -630,11 +667,175 @@ label start:
 
     "I've been here for two and a half hours already."
 
-    show kuromi neutral
+    show chrome neutral
     with dissolve
 
-    chrome "\"Um, Tamura-san, I think that's enough work for today.\""
+    chrome "\"Um, Tamura-kun, I think that's enough work for today.\""
 
-    protag ""
+    protag "\"Oh, okay.\""
+
+    chrome "\"I'm sorry for flying off the handle earlier.\""
+
+    protag "\"Oh no, it's fine. I'm sure it must be stressful doing this all alone.\""
+
+    chrome "\"Still, I feel bad for roping you into this for my own selfish benefit.\""
+
+    chrome "\"Please at least allow me to buy you dinner at the cafeteria tonight as an apology.\""
+
+    menu:
+        "\"Sure, why not.\"":
+            chrome happy "\"Great! Just let me clean up here and we can go.\""
+            $ chrome_flag += 1
+            jump dinner
+
+        "\"Sorry, I'm kinda tired.\"":
+            chrome sad "\"Oh, okay. Sorry for making you do so much work today.\""
+            protag "\"It was no problem, anything to pass right?\""
+            protag "\"I'll see you tomorrow.\""
+            chrome "\"Okay, have a good night.\""
+            hide chrome
+            with dissolve
+            jump home
+
+    label dinner:
+        show chrome neutral
+
+        "The two of us leave the school and make our way towards the on campus cafeteria."
+        
+        "The food here is never that great, but I guess I can't complain much as it saves me time."
+
+        chrome "\"What would you like to eat Tamura-kun? My treat.\""
+
+        protag "\"Naoto-kun is fine, Kuromi. I've already started calling you by your first name anyways.\""
+
+        chrome "\"Oh, sorry, Naoto. What would you like?\""
+
+        protag "\"Um, it's okay, you really don't have to pay for me.\""
+
+        chrome happy "\"It's fine, I insist. The student council gets a discount anyways!\""
+
+        "Really? Finally a perk of this job."
+
+        chrome "\"Although I don't know if that applies to those who were forced to join.\""
+
+        "Figures."
+
+        protag "\"Okay, I guess I'll get the eel bowl then.\""
+
+        chrome "\"Well, make that two eel bowls please!\""
+
+        "We find a seat and wait for out eel bowls to come to us."
+
+        protag "\"So...I've been dying to ask this, but why are you the only one in the student council?\""
+
+        show chrome surprised
+
+        protag "\"Sorry if it's a bit rude, you don't have to answer.\""
+
+        chrome neutral "\"No, it's okay. I am sure I would ask if I were in your position.\""
+
+        chrome "\"The truth is last year the student council was run by a bunch of seniors who had iron-like control over the school.\""
+
+        chrome "\"After they left, no one was interested in taking over for them except me.\""
+
+        chrome sad "\"I've tried finding new members, but no one wants to take on the work of the student council.\""
+
+        "Crap, I mad her sad. Better try and change the subject."
+
+        protag "\"Well, I'll do my best to try and lighten your load.\""
+
+        protag "\"Even if I was forced into it, I'll give the student council my best effort!\""
+
+        chrome happy "\"Thanks Naoto, that means a lot to me!\""
+
+        chrome "\"Oh look, our eel bowls are here, let's eat!\""
+
+        "We dig into our meal and split up afterward."
+
+        chrome "\"Thank you for all your hard work today!\""
+
+        hide chrome
+        with dissolve
+
+        jump bedtime
+
+    label home:
+        "I trudge my way home, exhausted from looking at papers all day."
+
+        "As I enter my room and lie down, I shortly hear a knock at my door."
+
+        protag "\"Who is it?\""
+
+        ie "\"It's Elsie. I figured you were hungry after the student council.\""
+
+        ie "\"Do you want to eat with me? I made some food.\""
+
+        menu:
+            "\"Sure, sounds great Elsie.\"":
+                $ ie_flag += 1 
+                jump home_dinner
+
+            "\"I'm too tired, I'm just gonna crash.\"":
+                ie "\"Oh, okay Naoto. Good night then!\""
+                jump bedtime
+
+        label home_dinner:
+            protag "\"Just come in, the door's open.\""
+
+            ie "\"Okay.\""
+
+            show ie surprised
+            with dissolve
+
+            ie "\"Wow this place is a pigsty!\""
+
+            "I knew that was coming."
+
+            ie neutral "\"Get up! I'll make space in your room so we can eat dinner.\""
+
+            "I struggle to escape the lure of my comfy bed."
+
+            ie "Here, I made some rice balls and fish. It's a simple meal, I know."
+
+            protag "\"Sometimes simple is nice. I think this is just what I needed.\""
+
+            "I take a rice ball from Elsie's hand, and place it into my mouth."
+
+            "The rice is still warm, and it almost melts into my mouth."
+
+            "This seems to kickstart the hunger in my stomach, and it responds accordingly."
+
+            play sound "sounds/effects/stomach.mp3"
+
+            ie happy "\"Hehe, is is good?\""
+
+            protag "\"Very.\""
+
+            "I manage to speak while stuffing food into my mouth."
+
+            ie neutral "\"I'm glad you like it. It's always better to eat with someone.\""
+
+            protag "\"I agree. Thank you so much Elsie.\""
+
+            protag "\"Without you I would have starved.\""
+
+            ie "\"You're welcome, I'm glad I could keep your stomach from eating itself.\""
+
+            protag "\"This warm food has made me all sleepy.\""
+
+            ie "\"It is late. I think it's time for bed.\""
+
+            ie "\"Try to wake up on time tomorrow!\""
+
+            protag "\"I will, I will. \""
+
+            ie "\"Okay, good night Naoto!\""
+
+            protag "\"Good night Elsie.\""
+
+            hide ie
+            with dissolve
+
+    label bedtime:
 
     return

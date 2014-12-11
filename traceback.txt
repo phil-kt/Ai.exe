@@ -1,20 +1,20 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 179, in script
-    IE "Yay! Let's eat. It's been a while since we've talked."
-Exception: Sayer 'IE' is not defined.
+  File "game/script.rpy", line 739, in script
+    chome "\"After they left, no one was interested in taking over for them except me.\""
+Exception: Sayer 'chome' is not defined.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 179, in script
-    IE "Yay! Let's eat. It's been a while since we've talked."
+  File "game/script.rpy", line 739, in script
+    chome "\"After they left, no one was interested in taking over for them except me.\""
   File "C:\Program Files (x86)\RenPy\renpy\ast.py", line 573, in execute
     who = eval_who(self.who, self.who_fast)
   File "C:\Program Files (x86)\RenPy\renpy\ast.py", line 491, in eval_who
     raise Exception("Sayer '%s' is not defined." % who.encode("utf-8"))
-Exception: Sayer 'IE' is not defined.
+Exception: Sayer 'chome' is not defined.
 
 Windows-post2008Server-6.2.9200
 Ren'Py 6.18.3.761
