@@ -18,13 +18,29 @@ image chrome sad = "images/chrome/chrome_sad_small.png"
 image chrome crying = "images/chrome/chrome_crying_small.png"
 image chrome surprised = "images/chrome/chrome_surprised_small.png"
 
+image chrome snow neutral = "images/chrome/chrome_snow_neutral_small.png"
+image chrome snow happy = "images/chrome/chrome_snow_happy_small.png"
+image chrome snow angry = "images/chrome/chrome_snow_angry_small.png"
+image chrome snow embarrassed = "images/chrome/chrome_snow_embarrassed_small.png"
+image chrome snow sad = "images/chrome/chrome_snow_sad_small.png"
+image chrome snow crying = "images/chrome/chrome_snow_crying_small.png"
+image chrome snow surprised = "images/chrome/chrome_snow_surprised_small.png"
+
 image ie neutral = "images/ie/ie_neutral_small.png"
 image ie happy = "images/ie/ie_happy_small.png"
 image ie angry = "images/ie/ie_angry_small.png"
 image ie embarrassed = "images/ie/ie_embarrassed_small.png"
 image ie sad = "images/ie/ie_sad_small.png"
-image ie crying = "images/ie/ie_crying_crying.png"
+image ie crying = "images/ie/ie_crying_small.png"
 image ie surprised = "images/ie/ie_surprised_small.png"
+
+image ie snow neutral = "images/ie/ie_snow_neutral_small.png"
+image ie snow happy = "images/ie/ie_snow_happy_small.png"
+image ie snow angry = "images/ie/ie_snow_angry_small.png"
+image ie snow embarrassed = "images/ie/ie_snow_embarrassed_small.png"
+image ie snow sad = "images/ie/ie_snow_sad_small.png"
+image ie snow crying = "images/ie/ie_snow_crying_small.png"
+image ie snow surprised = "images/ie/ie_snow_surprised_small.png"
 
 image mozilla neutral = "images/mozilla/mozilla_neutral_small.png"
 image mozilla happy = "images/mozilla/mozilla_happy_small.png"
@@ -33,6 +49,14 @@ image mozilla embarrassed = "images/mozilla/mozilla_embarrassed_small.png"
 image mozilla sad = "images/mozilla/mozilla_sad_small.png"
 image mozilla crying = "images/mozilla/mozilla_crying_small.png"
 image mozilla surprised = "images/mozilla/mozilla_surprised_small.png"
+
+image mozilla snow neutral = "images/mozilla/mozilla_snow_neutral_small.png"
+image mozilla snow happy = "images/mozilla/mozilla_snow_happy_small.png"
+image mozilla snow angry = "images/mozilla/mozilla_snow_angry_small.png"
+image mozilla snow embarrassed = "images/mozilla/mozilla_snow_embarrassed_small.png"
+image mozilla snow sad = "images/mozilla/mozilla_snow_sad_small.png"
+image mozilla snow crying = "images/mozilla/mozilla_snow_crying_small.png"
+image mozilla snow surprised = "images/mozilla/mozilla_snow_surprised_small.png"
 
 image bg desk = "images/bg/desk.jpg"
 image bg desk_broken = "images/bg/desk_broken.jpg"
@@ -45,6 +69,9 @@ image bg art_wall = "images/bg/art_wall.jpg"
 image bg library = "images/bg/library.jpg"
 image bg fountain_evening = "images/bg/fountain_evening.jpg"
 image bg outside_dorm = "images/bg/outside_dorm.jpg"
+image bg cafe = "images/bg/cafe.jpg"
+
+image thanks = "images/thanks_small.png"
 
 # The game starts here.
 label start:
@@ -53,6 +80,10 @@ label start:
     $ ie_flag = 0
     $ chrome_flag = 0
     $ mozilla_flag = 0
+
+    $ ie_shopping_date = False
+    $ chrome_cafe_date = False
+    $ mozilla_skate_date = False
 
     $ ie_tan = "???"
     $ kuromi = "???"
@@ -195,8 +226,7 @@ label start:
         "\"Yeah, okay.\"":
             ie "Yay! Let's eat. It's been a while since we've talked."
         "\"No thanks Elsie, I'm good.\"":
-
-            ie haopy "I won't take no for an answer!"
+            ie happy "I won't take no for an answer!"
             "Of course she wouldn't."
 
     ie neutral "\"Here, I made your favorite, steamed beef over rice with broccoli.\""
@@ -296,13 +326,15 @@ label start:
 
     protag "\"Just follow me, the faculty office isn't far.\""
 
-    mozilla happy "\"Thanks, you're a lifesaver!\""
+    show mozilla happy
+
+    mozilla "\"Thanks, you're a lifesaver!\""
 
     protag "\"No problem. So, a transfer student huh?\""
 
     protag "\"Isn't a bit late to transfer? I mean, we're already in winter.\""
 
-    mozilla "\"Haha, yeah maybe. My dad is a programmer and his job takes him all around the globe.\""
+    mozilla neutral "\"Haha, yeah maybe. My dad is a programmer and his job takes him all around the globe.\""
 
     mozilla "\"This time he brought us to Japan as he works on some new web browser.\""
 
@@ -320,7 +352,7 @@ label start:
 
     protag "\"Well, here we are.\""
 
-    mozilla "\"Thanks so much for your help! I never would have found this place on my own.\""
+    mozilla happy "\"Thanks so much for your help! I never would have found this place on my own.\""
 
     mozilla "\"Oh, what was your name by the way? I don't think I caught it. Mine is Mosaic.\""
 
@@ -328,11 +360,11 @@ label start:
 
     protag "\"I'm Naoto. Mosaic? That's a pretty interesting name.\""
 
-    mozilla "\"Yeah, my mom is an artist and she got to chose the name.\""
+    mozilla neutral "\"Yeah, my mom is an artist and she got to chose the name.\""
 
     mozilla "\"If my dad had his way I'd be named Godzilla or something, haha.\""
 
-    mozilla "\"Anyway, thanks again! Maybe we'll end up in the same class.\""
+    mozilla happy "\"Anyway, thanks again! Maybe we'll end up in the same class.\""
 
     "I wouldn't count on myself being so lucky..."
 
@@ -385,7 +417,7 @@ label start:
 
     "What an exhausting day."
 
-    "It was refreshing to go to school every once in a while."
+    "But it was kind of refreshing to go to school every once in a while."
 
     "The last thoughts of the day drifted through my mind as my head hit the pillow."
 
@@ -400,8 +432,6 @@ label start:
     "My alarm."
 
     "It's too early."
-
-    "*boop*"
 
     $ renpy.pause();
 
@@ -484,9 +514,9 @@ label start:
 
     ie neutral "\"Well, I was going to offer you lunch, but you seem to be in a bad move."
 
-    ie "Besides that, it seems that the student council president wants to see you in the hallway."
+    ie "\"Besides that, it seems that the student council president wants to see you in the hallway.\""
 
-    protag "Kuromi? Why would she want to see me?"
+    protag "\"Kuromi? Why would she want to see me?\""
 
     ie "\"Maybe it has to do with your tardiness today.\""
 
@@ -502,7 +532,7 @@ label start:
 
     ie "\"*whisper* Don't get in trouble! *whisper*\""
 
-    hide ie
+    scene bg hallway
 
     "I walk out into the hallway to meet Kuromi."
 
@@ -525,7 +555,7 @@ label start:
 
     "WHAAAAAAAT!? Failing?"
 
-    "This is I what I get for eschewing my lectures in favor of hunting down karmawhores on Reddit."
+    "This is I what I get for eschewing my lectures in favor of debating the superiority of Magic to Yugioh."
 
     protag "\"Are you serious?\""
 
@@ -553,8 +583,7 @@ label start:
 
     protag "\"Okay, I will see you then.\""
 
-    hide chrome
-    with dissolve
+    scene bg classroom
 
     "The bell chimes signifying the end of lunch."
 
@@ -678,7 +707,7 @@ label start:
 
     chrome "\"So if I can handle all these student council matters I trust you can file some papers!\""
 
-    "Ah crap I really hit a sweet spot didn't I."
+    "Ah crap, I really hit a sweet spot didn't I."
 
     protag "\"Sorry, I didn't mean to make you angry.\""
 
@@ -785,6 +814,7 @@ label start:
         jump bedtime
 
     label home:
+        scene bg desk_broken
         "I trudge my way home, exhausted from looking at papers all day."
 
         "As I enter my room and lie down, I shortly hear a knock at my door."
@@ -805,6 +835,8 @@ label start:
                 jump bedtime
 
         label home_dinner:
+            scene bg desk_broken
+
             protag "\"Just come in, the door's open.\""
 
             ie "\"Okay.\""
@@ -1021,6 +1053,7 @@ label start:
             mozilla happy "\"Yay! Thank you. Sorry for taking time out of your schedule.\""
             protag "\"It's no big deal. I didn't really have any other plans.\""
             mozilla "\"Okay, let's go!\""
+            jump school_tour
 
     label student_council:
         scene bg hallway
@@ -1084,6 +1117,11 @@ label start:
         protag "\"Oh, sorry Kuromi.\""
 
         "The rest of the time passed in silence as I though of slogans watching Kuromi draw."
+
+        scene bg student_council
+        with wipeleft
+
+        show chrome neutral
 
         chrome "\"Okay, I think it's about time to go.\""
 
@@ -1168,7 +1206,9 @@ label start:
         scene bg art_wall
         with pixellate
 
-        mozilla surprised "\"Woooww, I didn't know this school had arts stuff too!\""
+        show mozilla surprised
+
+        mozilla "\"Woooww, I didn't know this school had arts stuff too!\""
 
         "Mosaic stared intently at the wall of art."
 
@@ -1212,7 +1252,7 @@ label start:
 
         "These thoughts drift around in my head as I fall asleep."
 
-        scene bg dark
+        scene bg black
 
     $ renpy.pause()
 
@@ -1307,9 +1347,11 @@ label start:
 
     chrome angry "\"Do you guys mind being a bit quieter? Some of us are trying to eat.\""
 
-    ie "\"Oh, sorry Kuromi, I'm just super worried about this test.\""
+    ie neutral"\"Oh, sorry Kuromi, I'm just super worried about this test.\""
 
-    chrome "\"I understand Madou-san, but I think our class would like to have some quiet while eating.\""
+    show mozilla neutral
+
+    chrome neutral "\"I understand Madou-san, but I think our class would like to have some quiet while eating.\""
 
     chrome "\"That being said, I heard you all were planning to hold a study session for tomorrow's test?\""
 
@@ -1332,7 +1374,7 @@ label start:
 
     mozilla "\"It's fine with me.\""
 
-    chrome "\"Settled then, I'll see you all after class.\""
+    chrome "\"Settled then, just come right after class.\""
 
     play sound "sounds/effects/bell.mp3"
 
@@ -1340,5 +1382,324 @@ label start:
 
     ie neutral "\"Bye Kuromi, bye Mosaic, bye Naoto!\""
 
+    hide ie
+    with dissolve
 
-return
+    teacher "\"Okay everyone lunch time is over.\""
+
+    mozilla "\"See you after class\""
+
+    hide mozilla
+    with dissolve
+
+    chrome "\"See you at the student council room.\""
+
+    hide chrome
+    with dissolve
+
+    "Great, now I've become the lead of my own little study group."
+
+    "I'll just listen to lecture and hope I can absorb some of what he's saying."
+
+    scene bg classroom
+    with wipeleft
+
+    play sound "sounds/effects/bell.mp3"
+
+    "Finally class is over."
+
+    show ie neutral
+
+    ie "\"C'mon Naoto let's go!\""
+
+    "She sure is fast."
+
+    protag "\"Yeah hold on just let me get Mosaic.\""
+
+    show mozilla neutral at left
+
+    mozilla "\"I'm right behind you.\""
+
+    protag "\"Alright, let's go then.\""
+
+    scene bg hallway
+
+    "We make our way down to the student council office."
+
+    scene bg student_council
+    with None
+
+    show chrome neutral
+    with dissolve
+
+    "Kuromi was already there waiting for us, and had cleared away a table."
+
+    show ie happy at right 
+
+    show mozilla neutral at left
+
+    ie "\"Hi Kuromi!\""
+
+    chrome "\"Hello Madou-san, Roelle-san, Naoto-kun.\""
+
+    ie "\"You can just call me Elsie, just like Naoto does.\""
+
+    mozilla "\"And please, just call me Mosaic.\""
+
+    chrome "\"Okay, Kuromi is fine for me too Mosaic.\""
+
+    chrome "\"So why don't we start studying?\""
+
+    ie "\"Kuromi's gonna study with us too? Yay!\""
+
+    chrome "\"Yes, to be honest I was going to ask Naoto to help me as well seeign as he gets the best grades in the class.\""
+
+    "How did she know that?"
+
+    mozilla surprised "\"Really Naoto-kun? You're the top in our class?\""
+
+    protag "\"Well I don't like to advertise it, but yeah. I am.\""
+
+    mozilla "\"Wow, that's amazing!\""
+
+    ie "\"Yup, that's why I always ask him to help me with my work!\""
+
+    protag "\"She's been doing so since we met.\""
+
+    ie neutral "\"Thanks you for all the good grades Naoto, don't fail me this time either\""
+
+    protag "\"Yeah, yeah Elsie. Just listen to what I say and you won't fail.\""
+
+    hide mozilla
+    hide ie
+    hide chrome
+
+    "The rest of the night went by quickly as I answered question after question on computer history and structure."
+    
+    show mozilla neutral
+
+    mozilla "\"Naoto, what do RAM and CPU stand for?\""
+
+    hide mozilla
+    with fade
+
+    show chrome neutral
+    with fade
+
+    chrome "\"Naoto-kun, in the cache how do you determine what block is least recently used?\""
+
+    hide chrome
+    with fade
+
+    show ie crying
+
+    ie "\"NAAOOOTTTOOOO. Who is this 4chan guy the professor mentioned??\""
+
+    hide ie
+    with fade
+
+    scene bg student_council
+    with wipeleft
+
+    show chrome neutral 
+    show ie happy at right
+    show mozilla happy at left
+
+    "Finally, it's over."
+
+    protag "\"Does everyone feel prepared for tomorrow's test now?\""
+
+    ie "\"Very! Thank you as always Naoto!\""
+
+    mozilla neutral "\"Yeah, thank you Naoto-kun. Despite just transferring I feel prepared for our exam.\""
+
+    mozilla happy "\"Maybe you should be the one teaching our class.\""
+
+    chrome "\"I'm glad we all got to review like this together.\""
+
+    chrome "\"Perhaps we could all exchange phone numbers so next time this happens we could organize it without disrupting lunch?\""
+
+    protag "\"Well if the student council president says so I doubt we have much choice, haha.\""
+
+    show chrome angry
+
+    "That remark was rewarded with a glare."
+
+    ie "\"Now I have Kuromi's and Mosaic's phone numbers! Yay! \""
+
+    ie "\"I'll make sure to text you guys tonight!\""
+
+    mozilla "\"Hehe I look forward to it Elsie.\""
+
+    protag "\"Alright, now that that's finished let's all go home. Teaching is exhausting.\""
+
+    scene bg desk_broken
+    with wipeleft
+
+    "I stumble into my room with my mind running on empty."
+
+    "At least the girl treated me to dinner on the way back as thanks."
+
+    "Still, I should start charging for my tutoring services, especially for Elsie."
+
+    "*bzzzt*"
+
+    "I feel my phone vibrate in my pocket."
+
+    "It looks like I have a text."
+
+    ie "Thank you so much again Naoto! If I do well on tomorrow's test, would you like to go shopping this weekend to celebrate?"
+
+    "A sweet text from Elsie. At least I know I'm appreciated."
+
+    "I see that I also have two other texts that I must have missed earlier."
+
+    mozilla "Thank you Naoto-kun for today's review. :) I would have been totally lost without you T_T"
+
+    mozilla "If you'd like, and weather permitting, would you like to go ice skating this weekend as my thanks? Let me know :D"
+
+    "Ice skating huh..."
+
+    "And one last text."
+
+    chrome "Naoto, the tutoring session today was really helpful. I know I kind of barged in on it, but I really needed the assistance so thank you!"
+
+    chrome "If you'd like, would you like to go to a cafe this weekend as my treat for getting me caught up?"
+
+    "Oh boy...three different texts from three different girls."
+
+    "I've never had this problem before."
+
+    "What am I supposed to do?!"
+
+    "I guess I have to accept one invitation and decline the others."
+
+    "But what if the other two find out?!"
+
+    "Maybe I should just tell them all I'm busy."
+
+    "That's the safest bet."
+
+    "But on the other hand...a night out doesn't sound so bad."
+
+    "What should I do!?"
+
+    menu:
+        "Go shopping with Elsie":
+            $ ie_shopping_date = True
+            $ ie_flag += 1
+            "Elsie's always fun to be around with, and maybe I can get her to buy me something."
+            "That and I do need some new boots for winter."
+            "I'll tell the other two that I'm busy this weekend."
+            jump bedtime3
+
+        "Ice skating with Mosaic":
+            $ mozilla_skate_date = True
+            $ mozilla_flag += 1
+            "I haven't ice skated in forever."
+            "Plus, Mozilla is new in town and probably doesn't have many friends."
+            "I'd feel bad if she has to spend the weekend alone because I didn't agree to hang out."
+            "I can hang out with the other two some other time."
+            jump bedtime3
+
+        "Cafe with Kuromi":
+            $ chrome_cafe_date = True
+            $ chrome_flag += 1 
+            "If I get closer to Kuromi I may be able to escape this student council thing."
+            "That, and I can never pass up free food."
+            "I'll have to tell Elsie and Mosaic that I'm busy."
+            jump bedtime3
+        "None of them":
+            "I really don't want to cause some sort of conflict here."
+            "Plus, I don't even really know how I feel about these girls!"
+            "I'll just tell them I'm busy and hang out with them later."
+            jump bedtime3
+
+    label bedtime3:
+        "That was the first time I've had such a difficult decision to make."
+
+        "At least I know I have something to do after this test."
+
+        "Those girls wiped me out. Sleep is calling me."
+
+        scene bg black
+
+    scene bg outside_dorm
+
+    "Man, that test was a breeze."
+
+    "I even got to leave early and take a nap afterwards."
+
+    "I hope the girls did as well I did."
+
+    "That tutoring session should have helped them out quite a bit."
+
+    if ie_shopping_date == True:
+        jump ie_date
+
+    elif mozilla_skate_date == True:
+        jump mozilla_date
+
+    elif chrome_cafe_date == True:
+        jump chrome_date
+
+    else:
+        jump no_date
+
+    label ie_date:
+        "My phone rings, it's Elsie calling."
+
+        show ie snow happy
+
+        ie "Hi! I'm glad you chose me to be your date for today!"
+
+        ie snow sad "Unfortunately, this here ends our demo, so I hope you look forward to a better and full release soon!"
+
+        ie snow happy "And..Professor Gaboury, please give Phil and good grade, and have a great winter!"
+
+        jump end
+
+    label mozilla_date:
+        "My phone rings, Mosaic is calling me."
+
+        show mozilla snow happy
+
+        ie "Hey! I'm glad you decided to take me ice skating today!"
+
+        ie snow sad "Unfortunately, this here ends our demo, so I hope you look forward to our date in the full release!"
+
+        ie snow happy "And..Professor Gaboury, I hope Phil has earned a good grade and have a great winter break!"
+
+        jump end
+
+    label chrome_date:
+        "My phone rings, Kuromi is calling me."
+
+        show chrome snow happy
+
+        ie "Oh, Naoto-kun, I'm glad you took up my invitation to the cafe!"
+
+        ie snow sad "Unfortunately, this here ends our demo, so I hope you look forward to sharing coffee in the full release! "
+
+        ie snow happy "And..Professor Gaboury, I hope Phil has earned a good grade, have a great winter break!"
+
+        jump end
+
+
+    label no_date:
+        "I can't believe you didn't pick a girl."
+
+        "They weren't cute enough for you?"
+
+        "Well I hope this intense writing-athon has at least amused you Professor Gaboury."
+
+        "Have a good break, and feel free to give me feedback!"
+
+    label end:
+        scene thanks
+
+    $renpy.pause()
+
+    "Credits" "Writing: Philippe Kimura-Thollander \n Programming: Philippe Kimura-Thollander \n Art: My wonderful friend Roslyn Dong"
+
+    return

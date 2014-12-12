@@ -23,12 +23,12 @@ init -1 python hide:
     ## This controls the title of the window, when Ren'Py is
     ## running in a window.
 
-    config.window_title = u"Internet Love"
+    config.window_title = u"Ai.exe"
 
     # These control the name and version of the game, that are reported
     # with tracebacks and other debugging logs.
-    config.name = "Internet Love"
-    config.version = "0.0"
+    config.name = "Ai.exe"
+    config.version = "0.1"
 
     #########################################
     # Themes
@@ -39,44 +39,44 @@ init -1 python hide:
     ## The theme function takes a number of parameters that can
     ## customize the color scheme.
 
-    theme.glow(
-        ## Theme: Glow
-        ## Color scheme: Winter Mint
+    theme.marker(
+        ## Theme: Marker
+        ## Color scheme: Phone Operator
 
         ## The color of an idle widget face.
-        widget = "#7AA27B",
+        widget = "#59667a",
 
         ## The color of a focused widget face.
-        widget_hover = "#A3C7A3",
+        widget_hover = "#343e4d",
 
         ## The color of the text in a widget.
-        widget_text = "#CDE0CE",
+        widget_text = "#ffffff",
 
         ## The color of the text in a selected widget. (For
         ## example, the current value of a preference.)
-        widget_selected = "#ffffff",
+        widget_selected = "#bed4f6",
 
         ## The color of a disabled widget face.
-        disabled = "#426143",
+        disabled = "#929292",
 
         ## The color of disabled widget text.
-        disabled_text = "#819981",
+        disabled_text = "#ababab",
 
         ## The color of informational labels.
-        label = "#ffffff",
+        label = "#343e4d",
 
         ## The color of a frame containing widgets.
-        frame = "#245536",
+        frame = "#d2d2d2",
 
         ## The background of the main menu. This can be a color
         ## beginning with '#', or an image filename. The latter
         ## should take up the full height and width of the screen.
-        mm_root = "#e5f1e5",
+        mm_root = "images/titlescreen_small.png",
 
         ## The background of the game menu. This can be a color
         ## beginning with '#', or an image filename. The latter
         ## should take up the full height and width of the screen.
-        gm_root = "#e5f1e5",
+        gm_root = "#59667a",
 
         ## If this is True, the in-game window is rounded. If False,
         ## the in-game window is square.
@@ -296,12 +296,12 @@ init python:
     ## The name that's used for directories and archive files. For example, if
     ## this is 'mygame-1.0', the windows distribution will be in the
     ## directory 'mygame-1.0-win', in the 'mygame-1.0-win.zip' file.
-    build.directory_name = "Internet Love-1.0"
+    build.directory_name = "ai.exe"
 
     ## The name that's uses for executables - the program that users will run
     ## to start the game. For example, if this is 'mygame', then on Windows,
     ## users can click 'mygame.exe' to start the game.
-    build.executable_name = "Internet Love"
+    build.executable_name = "ai.exe"
 
     ## If True, Ren'Py will include update information into packages. This
     ## allows the updater to run.

@@ -2,8 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 782: expected statement.
-    home_dinner:
-               ^
+File "game/script.rpy", line 1088: expected statement.
+    scence bg student_council
+                             ^
 
 Ren'Py Version: Ren'Py 6.18.3.761
