@@ -1,4 +1,4 @@
-Thu Dec 11 16:06:19 2014
+Thu Dec 11 19:23:27 2014
 Windows-post2008Server-6.2.9200
 Ren'Py 6.18.3.761
 Internet Love 0.0
@@ -202,8 +202,8 @@ Texture testing:
 Performance test:
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.030000 seconds.
-- Frame drawn at 0.038000 seconds.
-- Frame drawn at 0.039000 seconds.
-- Frame drawn at 0.039000 seconds.
-- 0.039000 seconds to render 5 frames.
+- Frame drawn at 0.015000 seconds.
+- Frame drawn at 0.023000 seconds.
+- Frame drawn at 0.023000 seconds.
+- Frame drawn at 0.024000 seconds.
+-

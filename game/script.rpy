@@ -39,10 +39,12 @@ image bg desk_broken = "images/bg/desk_broken.jpg"
 image bg classroom = "images/bg/class.jpg"
 image bg black = "images/bg/black.jpg"
 image bg hallway = "images/bg/hallway.jpg"
-image bg student council = "images/bg/student_council.jpg"
+image bg student_council = "images/bg/student_council.jpg"
 image bg lab = "images/bg/lab.jpg"
 image bg art_wall = "images/bg/art_wall.jpg"
 image bg library = "images/bg/library.jpg"
+image bg fountain_evening = "images/bg/fountain_evening.jpg"
+image bg outside_dorm = "images/bg/outside_dorm.jpg"
 
 # The game starts here.
 label start:
@@ -94,6 +96,8 @@ label start:
 
     "Honestly, people online are so-"
 
+    scene bg desk_broken
+
     protag "Hey!" with hpunch 
 
     protag "What's going on?" with vpunch
@@ -104,16 +108,16 @@ label start:
 
     protag "My internal monologue is all screwed up."
 
-    $renpy.pause()
+    scene bg black
+
+    "----7 days later----"
 
     scene bg classroom
     with wipeleft
 
-    "----7 days later----"
-
     "You'd think an IT school would have competent repair services for computers"
 
-    "Well...apparently not."    
+    "Apparently that isn't the case."    
 
     "Now I'm stuck with a non-working computer and no money for a new one."
 
@@ -288,6 +292,8 @@ label start:
 
     "I have nothing better to do anyway."
 
+    scene bg hallway
+
     protag "\"Just follow me, the faculty office isn't far.\""
 
     mozilla happy "\"Thanks, you're a lifesaver!\""
@@ -337,6 +343,8 @@ label start:
     hide mozilla
     with dissolve
 
+    scene bg fountain_evening
+
     "I slowly meandered out the front gates of the school."
 
     "What a cute girl, I wonder where she's originally from."
@@ -371,6 +379,8 @@ label start:
     hide ie
     with dissolve
 
+    scene bg desk_broken
+
     "Finally I crashed through my door into my room."
 
     "What an exhausting day."
@@ -383,7 +393,7 @@ label start:
 
     $ renpy.pause()
 
-    "*BEEP BEEP BEEP*"
+    play sound "sounds/effects/alarm.mp3"
 
     "Ugh."
 
@@ -395,9 +405,9 @@ label start:
 
     $ renpy.pause();
 
-    scene bg desk
+    scene bg desk_broken
 
-    "*BEEP* *BEEP* *BEEP*"
+    play sound "sounds/effects/alarm.mp3"
 
     "Ugh."
 
@@ -415,6 +425,8 @@ label start:
 
     protag "\"Crap, I'm late!\""
 
+    scene bg outside_dorm
+
     "I take a shower and rush out the door, running full sprint to school."
 
     "*huff* *huff* *huff*"
@@ -426,6 +438,8 @@ label start:
     "Curse this digital age."
 
     "I slowly make my way up the stairs make it to my classroom"
+
+    scene bg classroom
 
     teacher "Ah, Tamura-san, how nice of you to join us."
 
@@ -456,6 +470,8 @@ label start:
 
     "My head lifts up without my control as I roil back laughing."
 
+    show ie happy
+
     "Elsie stops moving her fingers, and I am greeted by the sight of my fellow classmates all staring at me."
 
     "One of these classmates includes the new transfer student."
@@ -472,19 +488,19 @@ label start:
 
     protag "Kuromi? Why would she want to see me?"
 
-    ie "Maybe it has to do with your tardiness today."
+    ie "\"Maybe it has to do with your tardiness today.\""
 
-    protag "Yeah that could be it. Wait, how do you know I was late today?"
+    protag "\"Yeah that could be it. Wait, how do you know I was late today?\""
 
-    ie "I took a peek into your class this morning and saw you weren't there."
+    ie "\"I took a peek into your class this morning and saw you weren't there.\""
 
-    ie "Maybe I should be taking the liberty of waking you up to ensure you wake up on time."
+    ie "\"Maybe I should be taking the liberty of waking you up to ensure you wake up on time.\""
 
-    chrome "Tamura-kun, I'm waiting."
+    chrome "\"Tamura-kun, I'm waiting.\""
 
-    protag "Oh, sorry! Coming now."
+    protag "\"Oh, sorry! Coming now.\""
 
-    ie "*whisper* Don't get in trouble! *whisper*"
+    ie "\"*whisper* Don't get in trouble! *whisper*\""
 
     hide ie
 
@@ -495,11 +511,11 @@ label start:
     show chrome neutral
     with dissolve
 
-    chrome "Tamura-kun, I'm sorry to call you out."
+    chrome "\"Tamura-kun, I'm sorry to call you out.\""
 
-    protag "No, it's alright. I was late today so the least I can expect is a talking to from the student council president.\""
+    protag "\"No, it's alright. I was late today so the least I can expect is a talking to from the student council president.\""
 
-    chrome "Well actually, that's not the entire reason why I called you out here."
+    chrome "\"Well actually, that's not the entire reason why I called you out here.\""
 
     "Huh, what could she mean?"
 
@@ -604,6 +620,8 @@ label start:
     "Damn it why do I get nervous around authority figures."
 
     "She's just a student council president for Christ's sake!"
+
+    scene bg student_council
 
     "I enter the room and look around."
 
@@ -862,8 +880,11 @@ label start:
 
         scene bg black
 
+    scene bg desk_broken 
 
-    "*BEEP* *BEEP* BEEP*"
+    play sound "sounds/effects/alarm.mp3"
+
+    $ renpy.pause()
 
     "My alarm again."
 
@@ -881,7 +902,7 @@ label start:
 
     "I'm surprised how early I made it in."
 
-    if $ ie_flag == 1:
+    if ie_flag == 1:
         show ie happy
         with dissolve
 
@@ -894,7 +915,7 @@ label start:
         hide ie
         with dissolve
 
-    elif $ chrome_flag == 1 :
+    elif chrome_flag == 1 :
         show chrome happy
         with dissolve
 
@@ -1010,6 +1031,9 @@ label start:
 
         protag "\"Tamura Naoto, reporting for duty.\""
 
+        scene bg student_council
+        with None
+
         show chrome happy
         with dissolve
 
@@ -1046,6 +1070,39 @@ label start:
         chrome happy "\"Yeah! Something that will want to make people come and celebrate the holidays with their classmates!\""
 
         protag "\"Huh, I guess I can try.\""
+
+        "A slogan for a Christmas party?"
+
+        protag "\"Come spread cheer with your classmates!\""
+
+        protag "\"A festive event for finals!\""
+
+        protag "\"Gift giving without gimping!\""
+
+        chrome neutral "\"Please to think quietly, I can't focus on my drawing.\""
+
+        protag "\"Oh, sorry Kuromi.\""
+
+        "The rest of the time passed in silence as I though of slogans watching Kuromi draw."
+
+        chrome "\"Okay, I think it's about time to go.\""
+
+        chrome "\"Did you manage to think of anything?\""
+
+        protag "\"What about, \'Forget Starcraft, embrace Secret Santa!\'\""
+
+        chrome "\"...keep thinking about it tonight.\""
+
+        "Guess that one didn't work."
+
+        chrome happy "\"Good night Naoto.\""
+
+        protag "\"Yeah, 'night Kuromi. I'll see you tomorrow.\""
+
+        hide chrome
+        with dissolve
+
+        jump bedtime2
 
 
     label school_tour:
@@ -1119,4 +1176,169 @@ label start:
 
         protag "\"I don't really get it, but it makes this campus look cheerier so I don't mind.\""
 
-    return
+        protag "\"Anyway, that's pretty much for a tour of the school.\""
+
+        mozilla neutral "\"Oh, thank you so much Naoto! I know you must be busy and I feel bad for making you take me around.\""
+
+        protag "\"It's fine, like I said I didn't really have another plans.\""
+
+        "Man if Kuromi heard me I probably would be kicked out of school on the spot."
+
+        mozilla "\"Next time I'll have us do something more fun.\""
+
+        mozilla "\"It's late so I should get going home.\""
+
+        mozilla happy "\"Thanks again for showing me around!\""
+
+        protag "\"You're welcome!\""
+
+        hide mozilla
+        with dissolve
+
+        jump bedtime2
+
+    label bedtime2:
+        scene bg desk_broken
+
+        "Man, I'm exhausted."
+
+        "Every day seems to get busier and busier."
+
+        "Still, feeling tired at the end of the day is a good feeling."
+
+        "Before I used to just sleep at any time I felt like and was always in my bed."
+
+        "Now I feel like I accomplished something in the day."
+
+        "These thoughts drift around in my head as I fall asleep."
+
+        scene bg dark
+
+    $ renpy.pause()
+
+    play sound "sounds/effects/alarm.mp3"
+
+    "Another day."
+
+    "Time to get up."
+
+    scene bg classroom
+
+    teacher "\"Good morning class, in case you forgot, tomorrow we will be having an exam on this material.\""
+
+    "Wait, did he just say test."
+
+    "He did say test, didn't he?"
+
+    "Why didn't he mention this sooner?"
+
+    "Tomorrow? Well I think I'm comfortable enough with this material to pass an exam."
+
+    "I feel a piece of paper hit my back."
+
+    "Another note."
+
+    mozilla "Did he just say test? ;_;"
+
+    "I start to write my just as shocked reply."
+
+    teacher "*cough"
+
+    "..and promptly stop. I guess I'm being watched now."
+
+    "I appear to hang on to the teacher's every word for the rest of the lecture."
+
+    play sound "sounds/effects/bell.mp3"
+
+    "Whew, finally lunch."
+
+    ie "NATOOO HEEEELLP MEEEE!!!!"
+
+    show ie crying
+    with vpunch
+
+    protag "\"Woah, Elsie what's wrong!\""
+
+    ie "\"We've got a test tomorrow and I'm bound to fail.\""
+
+    "Ah, so that's it."
+
+    "I figured this might happen, she always depended on me in middle school for test."
+
+    protag "\"Yes, Elsie, I can help.\""
+
+    ie happy "\"Really Naoto? You're the best!\""
+
+    show mozilla neutral at right
+
+    mozilla "\"Ah, Naoto-kun. I was wondering whether you might be able to help me study for this test.\""
+
+    ie surprised "\"Oh my god are you the transfer student? You must be with that hair!\""
+
+    mozilla embarrassed "\"Y-yes, I am.\""
+
+    ie happy "\"You're soooooo pretty!\""
+
+    ie "\"What's your name? Where are you from? How do you get your hair so nice!\""
+
+    protag "\"Stop it Elsie, you're scaring her.\""
+
+    ie neutral "\"Ooops, sorry. Hi, I'm Elsie. Naoto's childhood friend.\""
+
+    mozilla happy "\"It's okay. I'm Mosaic, a transfer student from America. And your hair is nice too Elsie.\""
+
+    ie happy "\"You really think so? A pretty girl from America complimented my hair I can die happy Naoto.\""
+
+    "Talk about dramatic."
+
+    protag "\"Rest in peace Elsie.\""
+
+    ie crying "\"Noooo I can't die until I pass this test. Help me Naoto!!\""
+
+    ie neutral "\"Oh yeah, Mosaic, you said you needed help too? Why don't we all study together?\""
+
+    protag "\"Well I don't know if-\""
+
+    mozilla happy "\"That sounds good to me!\""
+
+    "Well that settles it."
+
+    show chrome neutral at left
+
+    chrome angry "\"Do you guys mind being a bit quieter? Some of us are trying to eat.\""
+
+    ie "\"Oh, sorry Kuromi, I'm just super worried about this test.\""
+
+    chrome "\"I understand Madou-san, but I think our class would like to have some quiet while eating.\""
+
+    chrome "\"That being said, I heard you all were planning to hold a study session for tomorrow's test?\""
+
+    ie happy "\"That's the plan.\""
+
+    chrome "\"Well if you'd like you can hold your review session in the student council office.\""
+
+    "Kurumi looked straight at me."
+
+    chrome "\"That way you can work on your council duties while teaching.\""
+
+    if mozilla_flag == 1:
+        "Haha, no escaping this time."
+
+    protag "\"Of course I'll be there.\""
+
+    protag "\"Is that okay with you two?\""
+
+    ie "\"Yay I get to study with Kuromi-chan and Mosaic-chan!\""
+
+    mozilla "\"It's fine with me.\""
+
+    chrome "\"Settled then, I'll see you all after class.\""
+
+    play sound "sounds/effects/bell.mp3"
+
+    ie surprised "\"Oop, lunch is over, gotta run!\""
+
+    ie neutral "\"Bye Kuromi, bye Mosaic, bye Naoto!\""
+
+
+return
