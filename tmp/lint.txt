@@ -1,13 +1,15 @@
 ﻿
-Ren'Py 6.18.3.761 lint report, generated at: Mon Dec 08 17:10:51 2014
+Ren'Py 6.18.3.761 lint report, generated at: Fri Dec 12 18:28:38 2014
+
+game/script.rpy:32 Image ie embarrassed uses file 'images/ie/ie_embarrassed_small.png', which is not loadable.
 
 
 Statistics:
 
-The game contains 2 dialogue blocks, containing 21 words and 108 characters,
-for an average of 10.5 words and 54 characters per block.
+The game contains 636 dialogue blocks, containing 6,178 words and 32,599
+characters, for an average of 9.7 words and 51 characters per block.
 
-The game contains 0 menus, 0 images, and 12 screens.
+The game contains 6 menus, 55 images, and 12 screens.
 
 
 Remember to set config.developer to False before releasing.

@@ -35,6 +35,7 @@ game/images/bg/IMG_3773.JPG matches ** ([u'all']).
 game/images/bg/IMG_3786.JPG matches ** ([u'all']).
 game/images/bg/lab.JPG matches ** ([u'all']).
 game/images/bg/library.JPG matches ** ([u'all']).
+game/images/bg/OGLdpf.log matches ** ([u'all']).
 game/images/bg/outside_dorm.JPG matches ** ([u'all']).
 game/images/bg/student_council.JPG matches ** ([u'all']).
 game/images/chrome/ matches ** ([u'all']).
@@ -164,8 +165,12 @@ game/script.rpyc matches ** ([u'all']).
 game/sounds/ matches ** ([u'all']).
 game/sounds/effects/ matches ** ([u'all']).
 game/sounds/effects/alarm.mp3 matches ** ([u'all']).
+game/sounds/effects/alarm.wav matches ** ([u'all']).
 game/sounds/effects/bell.mp3 matches ** ([u'all']).
+game/sounds/effects/bell.wav matches ** ([u'all']).
 game/sounds/effects/stomach.mp3 matches ** ([u'all']).
+game/sounds/music/ matches ** ([u'all']).
+game/sounds/music/lessBass.wav matches ** ([u'all']).
 log.txt matches log.txt (None).
 project.json matches project.json (None).
 README.html matches ** ([u'all']).

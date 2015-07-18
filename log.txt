@@ -1,11 +1,11 @@
-Thu Dec 11 23:07:39 2014
+Tue May 05 14:55:26 2015
 Windows-post2008Server-6.2.9200
 Ren'Py 6.18.3.761
 Ai.exe 0.1
 
 
-Windowed mode.
-Screen sizes: virtual=(800, 600) physical=(800, 600)
+Fullscreen mode.
+Screen sizes: virtual=(800, 600) physical=(1600, 900)
 Vendor: 'Intel'
 Renderer: 'Intel(R) HD Graphics 4600'
 Version: '4.2.0 - Build 10.18.10.3277'
@@ -203,7 +203,7 @@ Performance test:
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
 - Frame drawn at 0.007000 seconds.
-- Frame drawn at 0.014000 seconds.
-- Frame drawn at 0.014000 seconds.
-- Frame drawn at 0.015000 seconds.
-- 0.015000 seconds to render 5 frames.
+- Frame drawn at 0.028000 seconds.
+- Frame drawn at 0.029000 seconds.
+- Frame drawn at 0.031000 seconds.
+- 0.031000 seconds to render 5 frames.

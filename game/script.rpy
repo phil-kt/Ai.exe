@@ -1,4 +1,4 @@
-﻿# You can place the script of your game in this file.
+# You can place the script of your game in this file.
 
 # Declare images below this line, using the image statement.
 # eg. image eileen happy = "eileen_happy.png"
@@ -91,53 +91,65 @@ label start:
 
     scene bg desk
 
+    play music "sounds/music/lessBass.wav"
+
     protag "\"Troll.\""
 
     protag "\"Idiot.\""
 
     protag "\"Newfag.\""
 
+    "My name is Naoto Takamura, 14 year old freshman."
+
     "I've always been a shut in."
 
-    "Since I can remember I've been around computers and Internet games, talking and playing with people around the globe."
+    "Since I can remember I've always been the kid on his computer, rather than the one on the playground."
 
-    "It's so much more interesting than the real world."
+    "Tag and hide 'n seek, sports, these things never interested me."
 
-    "Not that there's anything wrong with real world."
+    "They all seem to boring in comparison to what you can do online."
 
-    "It's just...not as good as my virtual one." 
+    "Lead an army of thousands against another, talk with people from around the world about how stupid people are, porn."
+
+    "I recognize that it's unhealthy, however I manage to get by day to day without anyone thinking I'm a freak."
 
     "But ever since I started high school, my social aversion has only gotten worse."
 
     "I never saw myself going to college. So instead of going to a 'normal' high school, I decided to apply to a technical high school."
 
-    "It's a school designed to teach you applicable technology skills so you can graduate and get a job."
+    "North Tech High. It sounds like one of those schools they advertise on television, right?"
 
-    "I figure work must be better than more school."
+    "It's actually a pretty legitimate school, with entrance exams and everything. Not super easy to get into."
 
-    "When I came here, I thought the people would be like me, you know, socially awkward losers."
+    "They aim to make you employable straight out of graduation, and have a pretty good placement rate."
+
+    "However, the first year here is pretty much a joke. At least for someone like me who has pretty much been around computers 24/7."
+
+    "When I came here, I thought the people would be like me, you know, socially awkward outcasts."
 
     "It turns out even at nerd school you have cliques."
 
-    "Kids who play League of something, watch a bunch of anime, they all clump up into their own groups. "
+    "Kids who play League of something or watch Boku no Pico, they all clump up into their own groups. "
 
     "I never could fit in to any of them."
 
-    "So instead I sit here arguing on Internet forums to pass my time."
+    "After the first week or so I stopped attending classes."
 
-    "Honestly, people online are so-"
+    "It didn't seem worth my time to go."
+
+    "Honestly, I can't wait for these four years to be ov-"
 
     scene bg desk_broken
 
-    protag "Hey!" with hpunch 
+    protag "\"Hey!\"" with hpunch 
 
-    protag "What's going on?" with vpunch
+    "What's going on?" with vpunch
 
-    protag "What the hell, a blue screen!?"
+    "What the hell, a fatal system error!?"
 
-    protag "This is great."
+    "This is great."
 
-    protag "My internal monologue is all screwed up."
+    "My internal monologue is all screwed up."
 
     scene bg black
 
@@ -148,25 +160,25 @@ label start:
 
     "You'd think an IT school would have competent repair services for computers"
 
-    "Apparently that isn't the case."    
+    "Surprisingly, that isn't the case."    
 
     "Now I'm stuck with a non-working computer and no money for a new one."
 
     "I've even started going to class to do something to pass the time."
 
-    "So I sit here listening to the student council president go on about student council matters."
+    "So here I sit listening to the student council president go on about ever important student council matters."
 
     show chrome neutral
     
-    chrome "...Christmas party at the end of the month. Right now we're looking for organizers, so please stop by the student council room after school if you're interested!"
+    chrome "\"...Christmas party at the end of the month. Right now we're looking for organizers, so please stop by the student council room after school if you're interested!\""
 
     "That's Kuromi, our student council president."
 
     $ kuromi = "Kuromi"
 
-    "She's pretty strict and serious. However, as you can see she's pretty so she also has a fair amount of popularity, at least among the guys."
+    "She's pretty strict and serious. However, as you can see she's pretty, so she also has a fair amount of popularity. At least among the guys."
 
-    "Ever since she got into office, she's always trying to put into place new policies for the students."
+    "Ever since she got into office, she's always been trying to put into place new policies for the students."
 
     "Sometimes they're pretty good, like a unified school-wide mailing system, but sometimes they're pretty bad."
 
@@ -174,12 +186,12 @@ label start:
 
     "Overall I'd say she does a good job as a leader though."
 
-    chrome "Thank you for listening. Hope to see you all after class!"
+    chrome "\"Thank you for listening. Hope to see you all after class!\""
 
     hide chrome
     with dissolve
 
-    teacher "Okay, thank you Kuromi. Now moving onto class. Today we are covering..."
+    teacher "\"Okay, thank you Kuromi. Now moving onto class. Today we are covering...\""
 
     "Finally, it's lunch time."
 
@@ -187,7 +199,7 @@ label start:
 
     "As usual, everyone splits up to sit with their own little group of friends."
 
-    "I watch from my desk alone, isolated. As usual."
+    "I watch from my desk alone, isolated. An island unto myself."
 
     ie "\"Naoto-kun, you came to school today!\""
 
@@ -202,9 +214,15 @@ label start:
 
     "This is Elsie, my childhood friend."
 
+    "Pretty much the only one I have."
+
     "We lived next to each other as kids and always went over to each other's houses to play games."
 
     "We've been around each other ever since."
+
+    "She even took an interest in tech stuff, I guess from being around me all the time."
+
+    "She's not very good at it though."
 
     $ ie_tan = "Elsie"
 
@@ -237,15 +255,19 @@ label start:
 
     protag "\"You don't have to listen to every thing my mom says.\""
 
+    show ie neutral
+
     "I chow down on the beef and rice, carefully avoiding the broccoli."
 
-    "It's surprisingly good. Elsie was never the best at cooking, but it looks likes dorm life has brought out a bit of the chef in her."
+    "It's surprisingly good. Elsie was never the best at cooking, but it looks like dorm life has brought out a bit of the chef in her."
 
     ie angry "\"Don't think I don't see you!\""
 
     ie "\"You're only going to get paler if you don't eat it!\""
 
     protag "\"Sigh, alright alright. You got me.\""
+
+    show ie neutral
 
     "I silently chew down my broccoli just as I hear the bell ring."
 
@@ -260,9 +282,9 @@ label start:
 
     teacher "\"Okay, resuming where we left off.\""
 
-    "Oh boy, another monotone lecture to listen to."
+    "Oh boy, another monotone lecture to doze off to."
 
-    teacher "\"Tamura-san, you look bored. Could you answer this next question?\""
+    teacher "\"Takamura-san, you look bored. Could you answer this next question?\""
 
     "Crap, I wasn't paying attention at all."
 
@@ -270,20 +292,24 @@ label start:
 
     "Why did I just say that. I have no idea what we're covering."
 
-    teacher "\"What is the name of the language used to make websites?\""
+    teacher "\"What is the name of the language used to create the basis of a website?\""
 
     menu:
         "\"CSS\"":
-            teacher "\"Sorry, that's not right. Maybe you should pay better attention in class, Tamura-kun.\""
+            teacher "\"Sorry, that's not right. Maybe you should pay better attention in class, Takamura-kun.\""
             "I hear snickers around me."
             "What did I expect. I should've just admitted I wasn't looking."
         "\"HTML\"":
             teacher "\"Correct. And here I thought you weren't paying attention. Moving on.\""
             "He continues with his lecture as I bask in the small pride of answering correctly."
 
+    play sound "sounds/effects/bell.mp3"
+
     "Finally, I hear the bell signaling the end of class."
 
     "I mechanically pack up my bags, and quickly try to rush out the classroom."
+
+    stop sounds fadeout 1.0
 
     "I walk out the door and-"
 
@@ -326,9 +352,7 @@ label start:
 
     protag "\"Just follow me, the faculty office isn't far.\""
 
-    show mozilla happy
-
-    mozilla "\"Thanks, you're a lifesaver!\""
+    mozilla happy "\"Thanks, you're a lifesaver!\""
 
     protag "\"No problem. So, a transfer student huh?\""
 
@@ -344,7 +368,7 @@ label start:
 
     mozilla "\"I came to this school to learn more about what he does, and maybe pick up my own skills.\""
 
-    protag "\"The curriculum is pretty good, so you'll probably learn a lot while you're here.\""
+    protag "\"Well, the curriculum is pretty good, so you'll probably learn a lot while you're here.\""
 
     "Or at least, I hear it's good. I mainly pass based on my prior knowledge."
 
@@ -362,7 +386,7 @@ label start:
 
     mozilla neutral "\"Yeah, my mom is an artist and she got to chose the name.\""
 
-    mozilla "\"If my dad had his way I'd be named Godzilla or something, haha.\""
+    mozilla "\"If my dad had his way I'd be named Godzilla or something, hehe.\""
 
     mozilla happy "\"Anyway, thanks again! Maybe we'll end up in the same class.\""
 
@@ -377,18 +401,18 @@ label start:
 
     scene bg fountain_evening
 
-    "I slowly meandered out the front gates of the school."
+    "I slowly meander out the front gates of the school."
 
     "What a cute girl, I wonder where she's originally from."
 
-    "Certainly not Japanese with that hair color."
+    "Certainly not Japanese with that red hair."
 
     show ie angry
     with dissolve
 
     ie "\"Hey! You're late!\""
 
-    protag "\"Elsie? You were still waiting?\""
+    protag "\"Elsie? You were still here?\""
 
     ie "\"Yeah. It's not good to keep a lady waiting you know.\""
 
@@ -402,7 +426,7 @@ label start:
 
     protag "\"Yeah, it seems like she's a foreigner as well.\""
 
-    ie "\"A foreigner? How cool! You have to introduce me!\""
+    ie "\"A foreigner? You have to introduce me!\""
 
     protag "\"Yeah, yeah, I'll get right on it.\""
 
@@ -413,13 +437,13 @@ label start:
 
     scene bg desk_broken
 
-    "Finally I crashed through my door into my room."
+    "Finally I crash through my door into my room."
 
     "What an exhausting day."
 
-    "But it was kind of refreshing to go to school every once in a while."
+    "But...it was kind of refreshing to go to school every once in a while."
 
-    "The last thoughts of the day drifted through my mind as my head hit the pillow."
+    "The last thoughts of the day drift through my mind as my head hit the pillow."
 
     scene bg black
 
@@ -433,6 +457,8 @@ label start:
 
     "It's too early."
 
+    stop sound
+
     $ renpy.pause();
 
     scene bg desk_broken
@@ -442,6 +468,8 @@ label start:
     "Ugh."
 
     "My alarm."
+
+    stop sound
 
     "Wait."
 
@@ -467,11 +495,11 @@ label start:
 
     "Curse this digital age."
 
-    "I slowly make my way up the stairs make it to my classroom"
+    "I slowly make my way up the stairs and make it to my classroom"
 
     scene bg classroom
 
-    teacher "Ah, Tamura-san, how nice of you to join us."
+    teacher "Ah, Takamura-san, how nice of you to join us."
 
     "Yeah, yeah, hilarious."
 
@@ -479,7 +507,9 @@ label start:
 
     teacher "\"That much is evident by your hairstyle. Now please find a seat.\""
 
-    "The usual snickers abound."
+    "The classroom is filled with snickers."
+
+    "How do they like his jokes?"
 
     "I slowly make my way to my seat and promptly lie my head to down to disappear for a bit."
 
@@ -492,7 +522,7 @@ label start:
 
     "Elsie, huh. Well maybe I can just nap for a bit before she wakes me up completely."
 
-    ie angry"\"Are you ignoring me? Well then, I didn't want to do this but...\""
+    ie angry "\"Are you ignoring me? Well then, I didn't want to do this but...\""
 
     "I feel her slowly wriggling her fingers near my gut as-"
 
@@ -506,15 +536,15 @@ label start:
 
     "One of these classmates includes the new transfer student."
 
-    "Great, less than a day into class and I've already embarrassed myself for the rest of the semester."
+    "Great, less than a day into class and I've already embarrassed myself in front of her."
 
     "I try my best to stare daggers in Elsie's direction."
 
     protag "\"What do you want?\""
 
-    ie neutral "\"Well, I was going to offer you lunch, but you seem to be in a bad move."
+    ie neutral "\"Well, I was going to offer you lunch, but you seem to be in a bad mood.\""
 
-    ie "\"Besides that, it seems that the student council president wants to see you in the hallway.\""
+    ie "\"Oh, it seems that the student council president wants to see you in the hallway.\""
 
     protag "\"Kuromi? Why would she want to see me?\""
 
@@ -524,13 +554,13 @@ label start:
 
     ie "\"I took a peek into your class this morning and saw you weren't there.\""
 
-    ie "\"Maybe I should be taking the liberty of waking you up to ensure you wake up on time.\""
+    ie happy "\"Maybe I should be taking the liberty of waking you up to ensure you wake up on time.\""
 
-    chrome "\"Tamura-kun, I'm waiting.\""
+    chrome "\"Takamura-kun, I'm waiting.\""
 
     protag "\"Oh, sorry! Coming now.\""
 
-    ie "\"*whisper* Don't get in trouble! *whisper*\""
+    ie neutral "\"*whisper* Don't get in trouble! *whisper*\""
 
     scene bg hallway
 
@@ -541,21 +571,21 @@ label start:
     show chrome neutral
     with dissolve
 
-    chrome "\"Tamura-kun, I'm sorry to call you out.\""
+    chrome "\"Takamura-kun, I'm sorry to call you out.\""
 
     protag "\"No, it's alright. I was late today so the least I can expect is a talking to from the student council president.\""
 
     chrome "\"Well actually, that's not the entire reason why I called you out here.\""
 
-    "Huh, what could she mean?"
+    "What could she mean?"
 
     protag "\"Huh?\""
 
-    chrome "\"The truth is, you've missed so much school this semester that the teacher told me you were in danger of failing.\""
+    chrome "\"The truth is, you've missed so many classes this semester that the teacher told me you were in danger of failing.\""
 
-    "WHAAAAAAAT!? Failing?"
+    "WHAAAAAAAT!? Failing?" with vpunch
 
-    "This is I what I get for eschewing my lectures in favor of debating the superiority of Magic to Yugioh."
+    "This is what I get for eschewing my lectures in favor of debating the superiority of Magic to Yugioh."
 
     protag "\"Are you serious?\""
 
@@ -565,7 +595,7 @@ label start:
 
     "I didn't exactly enroll here on a whim."
 
-    chrome "\"So I struck out a deal with the teacher.\""
+    chrome "\"So I offered a compromise to the teacher.\""
 
     chrome "\"You'll be allowed to pass this semester, if you continue to attend every class from now until winter vacation.\""
 
@@ -577,19 +607,27 @@ label start:
 
     "Responsibility!? I've taken charge of thousands of virtual soldiers in wars spanning across the galaxy and you think I can't attend a school council?"
 
+    "Also, why don't I get a say in this?"
+
+    "But I don't want to get expelled. My parents are disappointed in me as is."
+
     protag "\"I understand. I guess I see where you and the teacher are coming from.\""
 
-    chrome happy "\"Great! Come down to the student council room after class today then and we'll get you started.\""
+    chrome happy "\"Great! Come down to the student council room after class today then, and we'll get you started.\""
 
     protag "\"Okay, I will see you then.\""
 
     scene bg classroom
 
+    play sound "sounds/effect/bell.mp3"
+
     "The bell chimes signifying the end of lunch."
 
     "I walk back into class just as Elsie is leaving."
 
-    show ie neutral
+    stop sound fadeout 1.0
+
+    show ie surprised
 
     ie "\"You were out there for a while, what were you talking about?\""
 
@@ -604,7 +642,7 @@ label start:
     hide ie
     with dissolve
 
-    "And with that clever comment she leaves the room."
+    "And with that clever comment she exits the room."
 
     teacher "\"Alright, everyone find your seats.\""
 
@@ -646,7 +684,7 @@ label start:
 
     protag "\"Yeah, s-sorry for being late.\""
 
-    "Damn it why do I get nervous around authority figures."
+    "Damn it why am I nervous?"
 
     "She's just a student council president for Christ's sake!"
 
@@ -673,7 +711,9 @@ label start:
 
     "Wow, we really don't have all that much of a budget."
 
-    "I had no idea Kuromi was working with so little tender."
+    "I had no idea Kuromi was working with such a tight budget."
+
+    "I wonder how she got all those initiatives passed..."
 
     "I really wish some other students would come and help lighten this load though."
 
@@ -681,7 +721,7 @@ label start:
 
     protag "\"Umm...Kuromi?\""
 
-    chrome "\"What is it Tamura-kun?\""
+    chrome "\"What is it Takamura-kun?\""
 
     protag "\"When do you think the other student council members will arrive?\""
 
@@ -711,9 +751,10 @@ label start:
 
     protag "\"Sorry, I didn't mean to make you angry.\""
 
-    chrome "\"Whatever, just file those papers.\""
+    chrome neutral "\"Whatever, just file those papers.\""
 
     hide chrome
+    with dissolve
 
     "With a heavy atmosphere, I went back to filing the class's receipts for the council's expenditures."
 
@@ -724,15 +765,15 @@ label start:
     show chrome neutral
     with dissolve
 
-    chrome "\"Um, Tamura-kun, I think that's enough work for today.\""
+    chrome "\"Um, Takamura-kun, I think that's enough work for today.\""
 
     protag "\"Oh, okay.\""
 
-    chrome "\"I'm sorry for flying off the handle earlier.\""
+    chrome embarrassed "\"I'm sorry for flying off the handle earlier.\""
 
     protag "\"Oh no, it's fine. I'm sure it must be stressful doing this all alone.\""
 
-    chrome "\"Still, I feel bad for roping you into this for my own selfish benefit.\""
+    chrome neutral "\"Still, I feel bad for roping you into this for my own selfish benefit.\""
 
     chrome "\"Please at least allow me to buy you dinner at the cafeteria tonight as an apology.\""
 
@@ -746,23 +787,26 @@ label start:
             chrome sad "\"Oh, okay. Sorry for making you do so much work today.\""
             protag "\"It was no problem, anything to pass right?\""
             protag "\"I'll see you tomorrow.\""
-            chrome "\"Okay, have a good night.\""
+            chrome neutral "\"Okay, have a good night.\""
             hide chrome
             with dissolve
             jump home
 
     label dinner:
+
+        scene bg cafeteria
+
         show chrome neutral
 
-        "The two of us leave the school and make our way towards the on campus cafeteria."
+        "The two of us left the school and made our way towards the on campus cafeteria."
         
         "The food here is never that great, but I guess I can't complain much as it saves me time."
 
-        chrome "\"What would you like to eat Tamura-kun? My treat.\""
+        chrome happy "\"What would you like to eat Takamura-kun? My treat.\""
 
         protag "\"Naoto-kun is fine, Kuromi. I've already started calling you by your first name anyways.\""
 
-        chrome "\"Oh, sorry, Naoto. What would you like?\""
+        chrome embarrassed "\"Oh, sorry, Naoto. What would you like?\""
 
         protag "\"Um, it's okay, you really don't have to pay for me.\""
 
@@ -770,7 +814,7 @@ label start:
 
         "Really? Finally a perk of this job."
 
-        chrome "\"Although I don't know if that applies to those who were forced to join.\""
+        chrome neutral "\"Although I don't know if that applies to those who were forced to join.\""
 
         "Figures."
 
@@ -802,11 +846,11 @@ label start:
 
         chrome happy "\"Thanks Naoto, that means a lot to me!\""
 
-        chrome "\"Oh look, our eel bowls are here, let's eat!\""
+        chrome neutral "\"Oh look, our eel bowls are here, let's eat!\""
 
         "We dig into our meal and split up afterward."
 
-        chrome "\"Thank you for all your hard work today!\""
+        chrome happy "\"Thank you for all your hard work today!\""
 
         hide chrome
         with dissolve
@@ -815,6 +859,7 @@ label start:
 
     label home:
         scene bg desk_broken
+        
         "I trudge my way home, exhausted from looking at papers all day."
 
         "As I enter my room and lie down, I shortly hear a knock at my door."
@@ -852,7 +897,7 @@ label start:
 
             "I struggle to escape the lure of my comfy bed."
 
-            ie "Here, I made some rice balls and fish. It's a simple meal, I know."
+            ie "\"Here, I made some rice balls with grilled fish. It's a simple meal, I know.\""
 
             protag "\"Sometimes simple is nice. I think this is just what I needed.\""
 
@@ -867,6 +912,8 @@ label start:
             ie happy "\"Hehe, is is good?\""
 
             protag "\"Very.\""
+
+            stop sound
 
             "I manage to speak while stuffing food into my mouth."
 
@@ -895,6 +942,7 @@ label start:
             jump bedtime
 
     label bedtime:
+        scene bg desk_broken
 
         "Oh man, what a tiring day."
 
@@ -906,7 +954,7 @@ label start:
 
         "Although I do kind of miss playing my visual novels."
 
-        "I was about to reach the true route!"
+        "I was about to reach the true ending!"
 
         "*sigh* I guess I'll have to wait 'til Christmas to see the ending."
 
@@ -919,6 +967,8 @@ label start:
     $ renpy.pause()
 
     "My alarm again."
+
+    stop sound
 
     "Time to actually get up."
 
@@ -982,13 +1032,13 @@ label start:
 
     "I open the note."
 
-    mozilla "Hi Naoto-kun, I've only been here two days but I already see why you sleep."
+    mozilla "Hi Naoto-kun, I've only been here two days but I already understand why you fall asleep hehe."
 
-    "A note from Mosaic? I scribble back."
+    "A note from Mosaic? I scribble back:"
 
-    protag "Haha, you too huh? This teacher knows just the right tone to use to put me to sleep."
+    protag "Haha, you too huh? This teacher knows just the right tone to knock me out."
 
-    "I sneakily toss is back towards her."
+    "I sneakily toss it back towards her."
 
     "She picks up the note and giggles at what I wrote."
 
@@ -1002,15 +1052,15 @@ label start:
 
     "After class...I have the student council."
 
-    teacher "Tamura-kun, are you exchanging notes in my class?"
+    teacher "\"Takamura-kun, are you exchanging notes in my class?\""
 
     "Caught red-handed."
 
-    protag "No sir, I was merely taking notes on a small piece of paper."
+    protag "\"No sir, I was merely taking notes on a small piece of paper.\""
 
-    protag "It makes carrying around the subject material much easier so I can study wherever I am."
+    protag "\"It makes carrying around the subject material much easier so I can study wherever I am.\""
 
-    teacher "Uh huh. Well I'll have my eye on you for the rest of the class."
+    teacher "\"Uh huh. Well I'll have my eye on you for the rest of the class.\""
 
     "Well I guess that ends note swapping time."
 
@@ -1024,15 +1074,17 @@ label start:
 
     "I get up and walk across to Mozilla."
 
+    stop sound fadeout 1.0
+
     show mozilla neutral
 
-    mozilla "Sorry I almost got you in trouble."
+    mozilla embarrassed "\"Sorry I almost got you in trouble.\""
 
-    protag "It's no big deal."
+    protag "\"It's no big deal.\""
 
-    mozilla happy "Yeah, you managed to give a pretty smooth response. It was funny."
+    mozilla happy "\"Yeah, you managed to give a pretty smooth response. It was funny.\""
 
-    protag "Haha, thanks. In response to the question in your note by the way."
+    protag "\"Haha, thanks. In response to the question in your note by the way.\""
 
     menu:
         "I have student council today, so sadly I can't":
@@ -1062,7 +1114,7 @@ label start:
 
         "This time I knock on the door with no fear."
 
-        protag "\"Tamura Naoto, reporting for duty.\""
+        protag "\"Naoto Takamura, reporting for duty.\""
 
         scene bg student_council
         with None
@@ -1086,7 +1138,7 @@ label start:
 
         "I take paper from Kuromi's hand a attempt to a Christmas tree."
 
-        chrome "\"Um, Naoto-kun, why does that saw have presents underneath it?\""
+        chrome "\"Um, Naoto-kun, why does that smokestack have presents underneath it?\""
 
         protag "\"It's not a saw it's a Christmas tree!\""
 
@@ -1104,6 +1156,8 @@ label start:
 
         protag "\"Huh, I guess I can try.\""
 
+        show chrome neutral
+
         "A slogan for a Christmas party?"
 
         protag "\"Come spread cheer with your classmates!\""
@@ -1112,7 +1166,7 @@ label start:
 
         protag "\"Gift giving without gimping!\""
 
-        chrome neutral "\"Please to think quietly, I can't focus on my drawing.\""
+        chrome "\"Please to think quietly, I can't focus on my drawing.\""
 
         protag "\"Oh, sorry Kuromi.\""
 
@@ -1162,6 +1216,8 @@ label start:
         show bg lab
         with pixellate
 
+        show mozilla surprised
+
         protag "\"This is the lab. It's where we work on most of our coding assignments.\""
 
         mozilla surprised"\"Ooo coding? I wonder when I'll start to do that.\""
@@ -1180,7 +1236,7 @@ label start:
 
         "They didn't seem to be all that great at it though."
 
-        protag "\"Haha, yeah, like that guy playing Pacman.\""
+        protag "\"Yeah, like that guy playing Pacman.\""
 
         show mozilla neutral
 
@@ -1213,6 +1269,8 @@ label start:
         "Mosaic stared intently at the wall of art."
 
         protag "\"Yeah, we have some students who are interested in graphic design so they like to sprinkle the campus with their art.\""
+
+        show mozilla neutral
 
         protag "\"I don't really get it, but it makes this campus look cheerier so I don't mind.\""
 
@@ -1260,6 +1318,8 @@ label start:
 
     "Another day."
 
+    stop sound
+
     "Time to get up."
 
     scene bg classroom
@@ -1270,7 +1330,7 @@ label start:
 
     "He did say test, didn't he?"
 
-    "Why didn't he mention this sooner?"
+    "Why didn't he mention this sooner?!"
 
     "Tomorrow? Well I think I'm comfortable enough with this material to pass an exam."
 
@@ -1280,9 +1340,9 @@ label start:
 
     mozilla "Did he just say test? ;_;"
 
-    "I start to write my just as shocked reply."
+    "I start to write my just as shocked reply:"
 
-    teacher "*cough"
+    teacher "*cough*"
 
     "..and promptly stop. I guess I'm being watched now."
 
@@ -1292,22 +1352,26 @@ label start:
 
     "Whew, finally lunch."
 
-    ie "NATOOO HEEEELLP MEEEE!!!!"
+    stop sound fadeout 1.0
+
+    ie "NAOTOOO HEEEELLP MEEEE!!!!"
 
     show ie crying
     with vpunch
 
-    protag "\"Woah, Elsie what's wrong!\""
+    protag "\"Woah, Elsie, what's wrong?!\""
 
     ie "\"We've got a test tomorrow and I'm bound to fail.\""
 
     "Ah, so that's it."
 
-    "I figured this might happen, she always depended on me in middle school for test."
+    "I figured this might happen, she always depended on me in middle school for tests."
 
     protag "\"Yes, Elsie, I can help.\""
 
     ie happy "\"Really Naoto? You're the best!\""
+
+    "What a quick turnaround."
 
     show mozilla neutral at right
 
@@ -1333,7 +1397,7 @@ label start:
 
     protag "\"Rest in peace Elsie.\""
 
-    ie crying "\"Noooo I can't die until I pass this test. Help me Naoto!!\""
+    ie crying "\"Wait noooo I can't die until I pass this test. Help me Naoto!!\""
 
     ie neutral "\"Oh yeah, Mosaic, you said you needed help too? Why don't we all study together?\""
 
@@ -1359,12 +1423,12 @@ label start:
 
     chrome "\"Well if you'd like you can hold your review session in the student council office.\""
 
-    "Kurumi looked straight at me."
+    "Kuromi looked straight at me."
 
     chrome "\"That way you can work on your council duties while teaching.\""
 
     if mozilla_flag == 1:
-        "Haha, no escaping this time."
+        "No escaping this time."
 
     protag "\"Of course I'll be there.\""
 
@@ -1382,12 +1446,14 @@ label start:
 
     ie neutral "\"Bye Kuromi, bye Mosaic, bye Naoto!\""
 
+    stop sound fadeout 1.0
+
     hide ie
     with dissolve
 
     teacher "\"Okay everyone lunch time is over.\""
 
-    mozilla "\"See you after class\""
+    mozilla "\"See you after class.\""
 
     hide mozilla
     with dissolve
@@ -1407,6 +1473,8 @@ label start:
     play sound "sounds/effects/bell.mp3"
 
     "Finally class is over."
+
+    stop sound fadeout 1.0
 
     show ie neutral
 
@@ -1446,13 +1514,13 @@ label start:
 
     mozilla "\"And please, just call me Mosaic.\""
 
-    chrome "\"Okay, Kuromi is fine for me too Mosaic.\""
+    chrome "\"Okay, Kuromi is fine for me too.\""
 
     chrome "\"So why don't we start studying?\""
 
     ie "\"Kuromi's gonna study with us too? Yay!\""
 
-    chrome "\"Yes, to be honest I was going to ask Naoto to help me as well seeign as he gets the best grades in the class.\""
+    chrome "\"Yes, to be honest I was going to ask Naoto to help me as well seeing as he gets the best grades in the class.\""
 
     "How did she know that?"
 
@@ -1523,7 +1591,7 @@ label start:
 
     show chrome angry
 
-    "That remark was rewarded with a glare."
+    "My remark was rewarded with a glare."
 
     ie "\"Now I have Kuromi's and Mosaic's phone numbers! Yay! \""
 
@@ -1538,7 +1606,7 @@ label start:
 
     "I stumble into my room with my mind running on empty."
 
-    "At least the girl treated me to dinner on the way back as thanks."
+    "At least the girls treated me to dinner on the way back as thanks."
 
     "Still, I should start charging for my tutoring services, especially for Elsie."
 
@@ -1548,7 +1616,7 @@ label start:
 
     "It looks like I have a text."
 
-    ie "Thank you so much again Naoto! If I do well on tomorrow's test, would you like to go shopping this weekend to celebrate?"
+    ie "Thank you so much again Naoto! If I do well on tomorrow's test, would you like to go shopping this weekend to celebrate? :) :)"
 
     "A sweet text from Elsie. At least I know I'm appreciated."
 
@@ -1556,7 +1624,7 @@ label start:
 
     mozilla "Thank you Naoto-kun for today's review. :) I would have been totally lost without you T_T"
 
-    mozilla "If you'd like, and weather permitting, would you like to go ice skating this weekend as my thanks? Let me know :D"
+    mozilla "If you'd like, and weather permitting, would you like to go ice skating this weekend as my thanks? Let me know ^^"
 
     "Ice skating huh..."
 
@@ -1649,57 +1717,27 @@ label start:
     label ie_date:
         "My phone rings, it's Elsie calling."
 
-        show ie snow happy
+        protag "\"Elsie? You're done already?\""
 
-        ie "Hi! I'm glad you chose me to be your date for today!"
-
-        ie snow sad "Unfortunately, this here ends our demo, so I hope you look forward to a better and full release soon!"
-
-        ie snow happy "And..Professor Gaboury, please give Phil and good grade, and have a great winter!"
+        ie "\"H\""
 
         jump end
 
     label mozilla_date:
-        "My phone rings, Mosaic is calling me."
-
-        show mozilla snow happy
-
-        ie "Hey! I'm glad you decided to take me ice skating today!"
-
-        ie snow sad "Unfortunately, this here ends our demo, so I hope you look forward to our date in the full release!"
-
-        ie snow happy "And..Professor Gaboury, I hope Phil has earned a good grade and have a great winter break!"
 
         jump end
 
     label chrome_date:
         "My phone rings, Kuromi is calling me."
 
-        show chrome snow happy
-
-        ie "Oh, Naoto-kun, I'm glad you took up my invitation to the cafe!"
-
-        ie snow sad "Unfortunately, this here ends our demo, so I hope you look forward to sharing coffee in the full release! "
-
-        ie snow happy "And..Professor Gaboury, I hope Phil has earned a good grade, have a great winter break!"
-
-        jump end
-
-
     label no_date:
         "I can't believe you didn't pick a girl."
-
-        "They weren't cute enough for you?"
-
-        "Well I hope this intense writing-athon has at least amused you Professor Gaboury."
-
-        "Have a good break, and feel free to give me feedback!"
 
     label end:
         scene thanks
 
     $renpy.pause()
 
-    "Credits" "Writing: Philippe Kimura-Thollander \n Programming: Philippe Kimura-Thollander \n Art: My wonderful friend Roslyn Dong"
+    "Credits" "Writing: Philippe Kimura-Thollander \n Programming: Philippe Kimura-Thollander \n Art: Roslyn Dong"
 
     return
