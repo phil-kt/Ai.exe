@@ -11,11 +11,13 @@ From left to right: Kuromi (Chrome), Elsie (Internet Explorer), and Mosaic (Mozi
 
 As Naoto begins to live his daily high school life he will find himself dragged towards one of the girls and his heart will begin to blossom.
 
-To play the game, download the repo and unzip the dist for your platform (Windows or Mac).
+## To Play
+To play the game, download the zip files from the Releases
 
+## How It Was Made
 Ai.exe was made in Renpy, with art contributed by my wonderful friend [Roslyn](https://www.instagram.com/shi__r0/).
 
-Some gameplay shots:
+## Gameplay
 ![Making a choice](game/images/screenshots/choice.png)
 
 ![Elsie](game/images/screenshots/elsie.png)
