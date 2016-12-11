@@ -1,31 +1,43 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 312, in script
-    stop sounds fadeout 1.0
-  File "renpy/common/000statements.rpy", line 203, in execute_stop_music
-    renpy.music.stop(fadeout=eval(p["fadeout"]), channel=channel)
-Exception: Audio channel u'sounds' is unknown.
+  File "game/script.rpy", line 624, in script
+    "The bell chimes signifying the end of lunch."
+IOError: Couldn't find file 'sounds/effect/bell.mp3'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 312, in script
-    stop sounds fadeout 1.0
-  File "C:\Program Files (x86)\RenPy\renpy\ast.py", line 1635, in execute
-    self.call("execute")
-  File "C:\Program Files (x86)\RenPy\renpy\ast.py", line 1653, in call
-    renpy.statements.call(method, parsed, *args, **kwargs)
-  File "C:\Program Files (x86)\RenPy\renpy\statements.py", line 144, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 203, in execute_stop_music
-    renpy.music.stop(fadeout=eval(p["fadeout"]), channel=channel)
-  File "C:\Program Files (x86)\RenPy\renpy\audio\music.py", line 221, in stop
-    c = get_channel(channel)
-  File "C:\Program Files (x86)\RenPy\renpy\audio\audio.py", line 758, in get_channel
-    raise Exception("Audio channel %r is unknown." % name)
-Exception: Audio channel u'sounds' is unknown.
+  File "game/script.rpy", line 624, in script
+    "The bell chimes signifying the end of lunch."
+  File "/Users/phil/Desktop/renpy-6.99.12-sdk/renpy/ast.py", line 613, in execute
+    renpy.exports.say(who, what, interact=self.interact)
+  File "/Users/phil/Desktop/renpy-6.99.12-sdk/renpy/exports.py", line 1142, in say
+    who(what, interact=interact)
+  File "/Users/phil/Desktop/renpy-6.99.12-sdk/renpy/character.py", line 876, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, **display_args)
+  File "/Users/phil/Desktop/renpy-6.99.12-sdk/renpy/character.py", line 715, in do_display
+    **display_args)
+  File "/Users/phil/Desktop/renpy-6.99.12-sdk/renpy/character.py", line 507, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "/Users/phil/Desktop/renpy-6.99.12-sdk/renpy/ui.py", line 285, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Users/phil/Desktop/renpy-6.99.12-sdk/renpy/display/core.py", line 2492, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "/Users/phil/Desktop/renpy-6.99.12-sdk/renpy/display/core.py", line 2791, in interact_core
+    renpy.audio.audio.interact()
+  File "/Users/phil/Desktop/renpy-6.99.12-sdk/renpy/audio/audio.py", line 930, in interact
+    periodic()
+  File "/Users/phil/Desktop/renpy-6.99.12-sdk/renpy/audio/audio.py", line 864, in periodic
+    c.periodic()
+  File "/Users/phil/Desktop/renpy-6.99.12-sdk/renpy/audio/audio.py", line 403, in periodic
+    topf = load(self.file_prefix + filename + self.file_suffix)
+  File "/Users/phil/Desktop/renpy-6.99.12-sdk/renpy/audio/audio.py", line 67, in load
+    rv = renpy.loader.load(fn)
+  File "/Users/phil/Desktop/renpy-6.99.12-sdk/renpy/loader.py", line 543, in load
+    raise IOError("Couldn't find file '%s'." % name)
+IOError: Couldn't find file 'sounds/effect/bell.mp3'.
 
-Windows-post2008Server-6.2.9200
-Ren'Py 6.18.3.761
+Darwin-16.1.0-x86_64-i386-64bit
+Ren'Py 6.99.12.1993
 Ai.exe 0.1

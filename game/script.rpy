@@ -75,7 +75,7 @@ image thanks = "images/thanks_small.png"
 
 # The game starts here.
 label start:
-    
+
 
     $ ie_flag = 0
     $ chrome_flag = 0
@@ -141,7 +141,7 @@ label start:
 
     scene bg desk_broken
 
-    protag "\"Hey!\"" with hpunch 
+    protag "\"Hey!\"" with hpunch
 
     "What's going on?" with vpunch
 
@@ -160,7 +160,7 @@ label start:
 
     "You'd think an IT school would have competent repair services for computers"
 
-    "Surprisingly, that isn't the case."    
+    "Surprisingly, that isn't the case."
 
     "Now I'm stuck with a non-working computer and no money for a new one."
 
@@ -169,7 +169,7 @@ label start:
     "So here I sit listening to the student council president go on about ever important student council matters."
 
     show chrome neutral
-    
+
     chrome "\"...Christmas party at the end of the month. Right now we're looking for organizers, so please stop by the student council room after school if you're interested!\""
 
     "That's Kuromi, our student council president."
@@ -619,7 +619,7 @@ label start:
 
     scene bg classroom
 
-    play sound "sounds/effect/bell.mp3"
+    play sound "sounds/effects/bell.mp3"
 
     "The bell chimes signifying the end of lunch."
 
@@ -799,7 +799,7 @@ label start:
         show chrome neutral
 
         "The two of us left the school and made our way towards the on campus cafeteria."
-        
+
         "The food here is never that great, but I guess I can't complain much as it saves me time."
 
         chrome happy "\"What would you like to eat Takamura-kun? My treat.\""
@@ -859,7 +859,7 @@ label start:
 
     label home:
         scene bg desk_broken
-        
+
         "I trudge my way home, exhausted from looking at papers all day."
 
         "As I enter my room and lie down, I shortly hear a knock at my door."
@@ -872,7 +872,7 @@ label start:
 
         menu:
             "\"Sure, sounds great Elsie.\"":
-                $ ie_flag += 1 
+                $ ie_flag += 1
                 jump home_dinner
 
             "\"I'm too tired, I'm just gonna crash.\"":
@@ -960,7 +960,7 @@ label start:
 
         scene bg black
 
-    scene bg desk_broken 
+    scene bg desk_broken
 
     play sound "sounds/effects/alarm.mp3"
 
@@ -989,7 +989,7 @@ label start:
         with dissolve
 
         ie "I'm glad you made it today!"
-        
+
         protag "\"Yeah, the dinner last night really helped me sleep well.\""
 
         ie "\"Great, I have to go back to class now but I'll see you at lunch!\""
@@ -1048,7 +1048,7 @@ label start:
 
     "Crap. I slept through lunch? I can't believe Elsie didn't wake me up."
 
-    mozilla "By the way, would you mind showing me around the school again today?" 
+    mozilla "By the way, would you mind showing me around the school again today?"
 
     "After class...I have the student council."
 
@@ -1502,7 +1502,7 @@ label start:
 
     "Kuromi was already there waiting for us, and had cleared away a table."
 
-    show ie happy at right 
+    show ie happy at right
 
     show mozilla neutral at left
 
@@ -1543,7 +1543,7 @@ label start:
     hide chrome
 
     "The rest of the night went by quickly as I answered question after question on computer history and structure."
-    
+
     show mozilla neutral
 
     mozilla "\"Naoto, what do RAM and CPU stand for?\""
@@ -1569,7 +1569,7 @@ label start:
     scene bg student_council
     with wipeleft
 
-    show chrome neutral 
+    show chrome neutral
     show ie happy at right
     show mozilla happy at left
 
@@ -1672,7 +1672,7 @@ label start:
 
         "Cafe with Kuromi":
             $ chrome_cafe_date = True
-            $ chrome_flag += 1 
+            $ chrome_flag += 1
             "If I get closer to Kuromi I may be able to escape this student council thing."
             "That, and I can never pass up free food."
             "I'll have to tell Elsie and Mosaic that I'm busy."
